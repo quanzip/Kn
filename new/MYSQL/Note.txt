@@ -1,0 +1,7 @@
+offset: vị trí bắt đầu lấy các dòng muốn lấy tính từ phần tử đầu tiên hợp lệ
+có thể set off-set cho sql:
+select * from student offset 10
+Có thể kết hợp vs limit:
+select * from student limit 10 offset 15 ,
+rút gọn: select * from student limit 15, 10
+=> lấy ra 10 pt, đắt đầu lấy từ phần tử thứ 15

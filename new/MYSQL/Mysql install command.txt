@@ -1,0 +1,41 @@
+-back up data by file
+mysqldump -u root -p db_name > /backup/db_name.sql
+-back up entire DB 
+mysqldump -u USER -p --all-databases > /mnt/backups/all_databases.sql
+
+-Some time we need to take a single table backup, at that time we can use the command given below:
+Mysql -u root -p database name table name > databasename_tablename.sql
+
+-In order to restore the database backup, we have to use the command:
+mysql -u root -p  db_name  < /backup/db_name.sql
+
+- The below command takes the backup of remote server [172.16.25.126] database [gallery] into a local server.
+# mysqldump -h 172.16.25.126 -u root -ptecmint gallery > gallery.sql
+
+- If you want to restore a database that already exist on targeted machine, then you will need to use the mysqlimport command.
+# mysqlimport -u root -ptecmint rsyslog < rsyslog.sql
+
+- get temp password
+sudo grep 'temporary password' /var/log/mysqld.log
+
+-After start mysql: [sudo systemctl start mysqld],   Use this command to run the security script.
+sudo mysql_secure_installation
+
+-Change the root password as soon as possible by logging in with the generated, temporary password and set a custom password for the superuser account:
+shell> mysql -uroot -p
+mysql> ALTER USER 'root'@'localhost' IDENTIFIED BY 'MyNewPass4!';
+
+-Change password of user to login mysql    |    login, start using mysql
+mysql -u root -p
+
+-Stop | start the MySQL server with this command:
+sudo systemctl stop | start mysqld
+
+Use the following command to reconnect to MySQL as root:
+mysql -uroot
+
+-Create DB and user
+CREATE DATABASE newdb
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password'
+GRANT ALL PRIVILEGES ON newdb.* TO 'username'@'localhost'
+FLUSH PRIVILEGES // refresh

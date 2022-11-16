@@ -1,0 +1,2 @@
+show processlist;  // list all process - kill Id for error
+SELECT * FROM `information_schema`.`innodb_trx` ORDER BY `trx_started`   // list process runing, -> kill thread_id for error

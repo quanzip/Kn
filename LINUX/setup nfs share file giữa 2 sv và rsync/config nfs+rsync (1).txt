@@ -1,0 +1,86 @@
+Server share: 10.254.144.118
+Client: 	  10.254.144.119
+
+rpm -qa | grep nfs
+rpm -q rpcbind
+
+Cài các gói nfs trên cả 2 server:
+yum install nfs-utils nfs-utils-lib
+chkconfig nfs on 
+chkconfig rpcbind on
+chkconfig nfslock on
+service rpcbind start
+service nfs start
+service nfslock start
+
+Config phia server: 
+vi /etc/exports
+/u01/           10.254.144.119(rw,sync,no_root_squash,no_subtree_check)
+
+--------Trong đó /u01 là phân vùng cần share----------
+Gõ lệnh dưới để thực hiện export:
+exportfs -a
+
+rpcinfo -p                                             //dung lenh nay de list cac port can mo cua NFS 
+
+vi /etc/rc.local
+	/usr/sbin/exportfs -a -v
+ vi /etc/sysconfig/nfs
+ (Sửa các tham số như dưới)
+ LOCKD_TCPPORT=32803
+ LOCKD_UDPPORT=32769
+ MOUNTD_PORT=892
+ RQUOTAD_PORT=875
+ STATD_PORT=662
+ STATD_OUTGOING_PORT=2020
+ 
+ 
+##Them iptables cho server share
+
+##Rule NFS
+-A INPUT -s 10.254.144.119/32 -p tcp -m state --state NEW -m tcp -m multiport --dports 111,662,44612,35443,892,2049,32769,32803 -j ACCEPT
+-A INPUT -s 10.254.144.119/32 -p udp -m state --state NEW -m udp -m multiport --dports 111,662,44612,35443,892,2049,32769,32803 -j ACCEPT
+
+
+---------------Config phia Client----------------
+Thêm cấu hình trong /etc/fstab
+vi /etc/fstab
+10.254.144.118:/u01/  /u01/    nfs  rw,sync,hard,intr 0 0
+
+##Them rule iptables
+-A OUTPUT -d 10.254.144.118/32 -p tcp -m state --state NEW -m tcp -m multiport --dports 111,662,44612,35443,892,2049,32769,32803 -j ACCEPT
+-A OUTPUT -d 10.254.144.118/32 -p udp -m state --state NEW -m udp -m multiport --dports 111,662,44612,35443,892,2049,32769,32803 -j ACCEPT
+
+ mkdir /u01 (Đảm bảo trên server client khi df -h chưa có phân vùng /u01. Nếu đã có rồi thì umount /u01 và #file trong fstab lại sửa /u01 ban đầu thành backup)
+ mkdir /backup
+ Chạy lệnh:
+ mount 10.254.144.118:/u01/  /u01/  hoặc mount /u01
+ mount /backup
+
+Tiến hành rsync dữ liệu từ /u01 xuống /backup để phục vụ backup dữ liệu.
+Chú ý: Dùng user đang chạy ứng dụng để chạy rsync
+Lần đầu tiên khi có nhiều dữ liệu ta sẽ rsync bằng tay trước. Từ các lần sau sẽ dùng crontab
+rsync -avh /u01 /backup
+
+Tạo script rsync
+mkdir /home/app/script_rsync
+vi rsync
+rsync -avh /u01/ /backup/
+chmod +x rsync
+
+crontab -e (Dùng user chạy ứng dụng - Rsync vào các khung giờ 00, 6h, 12h, 18h)
+00 00 * * * sh /home/app/script_rsync/rsync
+00 06 * * * sh /home/app/script_rsync/rsync
+00 12 * * * sh /home/app/script_rsync/rsync
+00 18 * * * sh /home/app/script_rsync/rsync
+
+Note: Kiểm tra rsync bằng cách test tạo thử file trên /u01
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 

@@ -1,0 +1,101 @@
+version: '2.0'
+services:
+  configserver:   # this name is optional
+    build:
+      context: config-server   # this name must match with folder name of the project in same folder containing this file
+      dockerfile: DockerFile   # inside project, it need to have the docker file with this name
+    image: config-service:2.0  # image name after build finished in docker host
+    ports:
+      - 9025:9025  # head port: port map with back port inside container, use for pc, uers can use this port to access
+                   # back port: port of service insdie container, when user call service.headPort docker will turn to service.backPort to connect to service inside container
+    env_file:
+      - local.env  # env file contain vars to pass to env file inside folder of config-server
+  discoveryserver:
+    build:
+      context: Discovery-server
+      dockerfile: Docker
+    image: discovery-server:2.0
+    ports:
+      - 9999:9999
+    restart: on-failure # docker will auto restart this service when start failed
+    env_file:
+      - local.env
+  authserver:
+    build:
+      context: Auth-server
+      dockerfile: Docker.txt
+    image: auth-server:2.0
+    ports:
+      - 9000:9000
+    env_file: local.env
+    restart: on-failure
+  gatewayserver:
+    build:
+      context: Gateway-server
+      dockerfile: Docker
+    image: gateway-server:2.0
+    ports:
+      - 8080:8080
+    env_file:
+      - local.env
+    restart: on-failure
+  adminserver:
+    build:
+      context: Admin-server
+      dockerfile: DockerFile
+    image: admin-server:2.0
+    ports:
+      - 9090:9090
+    env_file:
+      - local.env
+  accountservice:
+    build:
+      context: account-service
+      dockerfile: Docker
+    image: account-service:2.0
+    ports:
+      - 9080:9080
+    env_file:
+      - local.env
+    volumes: 
+    # important: path1: path2
+    # path1 is path to folder of external host, it is folder of server running docker host
+    # path2 is path of service running inside container.
+    # when map them together like this. file in path2 will be send folder of path1 in the running docker host
+    # So people can access folder of path1 to view file directly, the dont have to get inside container
+      - /Users/phamhongquan/IdeaProjects/Micro service app 2/account/:/output/
+    restart: on-failure
+  sratisticservice:
+    build:
+      context: statistic-service
+      dockerfile: DockerFile
+    image: statistic-service:2.0
+    ports:
+      - 9081:9081
+    env_file:
+      - local.env
+    volumes: 
+    # Same folder mapping as above.
+      - /Users/phamhongquan/IdeaProjects/Micro service app 2/statistic/:/output/
+    restart: on-failure
+  emailservice:
+    build:
+      context: Email-service
+      dockerfile: Docker
+    image: email-service:2.0
+    ports:
+      - 9082:9082
+    env_file:
+      - local.env
+    restart: on-failure
+  clientservice:
+    build:
+      context: client-register-service
+      dockerfile: Docker
+    image: client-service:2.0
+    container_name: client-service-dCompose-ctn
+    ports:
+      - 9095:9095
+    env_file:
+      - local.env
+    restart: on-failure

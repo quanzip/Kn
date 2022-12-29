@@ -1,0 +1,2 @@
+ - object references an unsaved transient instance - save the transient instance before flushing -> 
+saving object contain foreign key that reference form other Entity has not set value.

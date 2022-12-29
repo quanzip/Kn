@@ -1,0 +1,28 @@
+Cau truc EVENT-DRIVENT: cac ung dụng bất đồng bộ có thể tương tác với nhau thông qua các event và công đoạn phân phối event(brokers) tới các nơi tiêu thụ
+
+- kafka có độ tin cậy cao, có thể scale tốt khi mở rộng ứng dụng, băng thông cao(xử lý data stream ở tốc độ cao) vd, nhận dl click, like, camera, ựng dụng... mà có tần xuất lớn.
+
+- data được lưu lại trong file, có thể đọc, xử lý, thay đổi hoặc chuyển tới các nơi khác nhau.
+Có thể sd kafka để đọc ghi  DL liên tục
+
+
+- cluster: Là 1 set 1 số các brokers. nếu broker nào bị sập, sẽ có broker thay thế ngay. có cơ chế để chống dl bị mất hoặc lập đi lặp lại trong các brokers
+
+- Broker là các nodes, giúp phân phối các event từ producer tới cónsumers
+- kafka thuong có số broker lẻ. (vấn đề đồng thuận dễ hơn khi bầu chọn 1 node làm primary)
+- zookeeper sẽ là quản lý của các node, sẽ chỉ định node nào sẽ thay thế node chính khi mà node chính bị die, cần phải chạy zookeeper trước, nó sẽ quản lý các broker, topic, offset, events.
+
+-Producer and consumer hoàn toàn không phải là 1 cặp luôn song hành, đây là đặc điểm chính của thiết kế kafka để đạt được sự hiệu quả cao trong khả năng co dãn. vd, producer sẽ không bao giờ đợi consumer tiêu thụ rồi mới gửi, và đảm bảo rằng, mỗi event sẽ chỉ được đọc bởi consumer 1 lần.
+producer cần có sẻrializer để chuyển dâta về byte và kafka cí thể lưu được, consumer phải có deserializer để đọc byte tử kafka.
+
+-1 topic có thể có thể có nhiều producers, cũng có thể không có hoặc có nhiều consumers. 1 topic được chia thành nhiều partitions trên 1 broker, ,có 1 part là leader trong số đó, các partition đó đưọc copy lại trên các broker khác nhau,1 topic có 1 tên, nhiều topics có thể tồn tại trong 1 brokers
+
+-event lưu trữ dưới dạng topic, có thể định thời gian lưu giữ bao lâu trong topic. vd, topics là các folder in system, event là các file bên trong folder đó. event có thể được đọc theo tuần xuất mong muốn và không bị xóa đi sau khi được đọc. 
+
+Sử lý lỗi ở consumer: use DefaultErrorHandler.
+ // This bean is for solving error while consumming event from kafka broker.
+//    if there are 5 event comming, but event 3th get trouble after 1th, 2th successfull consumed
+//    Then kafka will stop consumming 
+//    and try to re-send that failed data every 1s, max is 2 times to kafka-broker(this is reason why i use producer config in application.yml)
+//    if still failed, kafkaTempalte will push that event to DTL topic 
+//    and continue comsuming 4th and 5th events

@@ -1,0 +1,43 @@
+quan
+Khi dung java de luu file, can chu y: 
+ + neu file do la 1 file hoan chinh (co extention, khong phai directtory) => khong dc goi ham file.mkdir() trong truong hop file do khong ton tai, neu khong, java se coi do la 1 directory sau khi goi file.mkdir() va xu ly sai.
+
++ neu file do la 1 directory, va khong ton tai, thi moi dc goi file.mkdir()
+
+Vd:
+public static void saveFileToFolder(MultipartFile input, File destination) {
+        if (!destination.exists()) {
+            logger.info("Create folderl: " + destination.getName() + ", result: " + 									destination.mkdir());  // DANGER
+        }
+
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(destination);
+            fileOutputStream.write(input.getBytes());
+        } catch (FileNotFoundException e) {
+            logger.error("Destination / input file does not exist");
+            e.printStackTrace();
+        } catch (IOException e) {
+            logger.error("Can not read bytes from file input");
+            e.printStackTrace();
+        }
+
+    }
+Solution:
+
+public static void saveFileToFolder(MultipartFile input, File destination) {
+        if (destination.isDirectory() && !destination.exists()) {      			
+            logger.info("Create folderl: " + destination.getName() + ", result: " + 									destination.mkdir());  // ok
+        }
+
+        try {
+            FileOutputStream fileOutputStream = new FileOutputStream(destination);
+            fileOutputStream.write(input.getBytes());
+        } catch (FileNotFoundException e) {
+            logger.error("Destination / input file does not exist");
+            e.printStackTrace();
+        } catch (IOException e) {
+            logger.error("Can not read bytes from file input");
+            e.printStackTrace();
+        }
+
+    }

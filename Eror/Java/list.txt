@@ -1,2 +1,3 @@
  - object references an unsaved transient instance - save the transient instance before flushing -> 
 saving object contain foreign key that reference form other Entity has not set value.
+- status 403 springboot app: có thể tài khoản đang login thiếu quyền để thực hiện chức năng. Nếu dãdur quyền, thì do lỗi csrf:( không xác định được client có phải là client đúng hay không), trong class Securoty của ứng dụng, thêm config:  tại method:  configure(HttpSecurity http) thêm: http.csrf().disable()....

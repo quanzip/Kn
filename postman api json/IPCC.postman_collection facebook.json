@@ -1,0 +1,5031 @@
+{
+	"info": {
+		"_postman_id": "017e0ed6-b72f-456b-9555-ca3c1df49916",
+		"name": "IPCC",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "4984680"
+	},
+	"item": [
+		{
+			"name": "EMAIL_API",
+			"item": [
+				{
+					"name": "SendTestEmail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"emailAccountId\":1261,\"emailAddress\":\"info@bambooairways.com\",\"password\":\"dce1c304e33fa672a7f2fa74f891bf4b\",\"accountType\":null,\"incomingServer\":\"outlook.office365.com\",\"incomingServerPort\":995,\"encryptType\":null,\"outgoingServer\":\"smtp.office365.com\",\"outgoingServerPort\":587,\"incomingServerAuth\":\"true\",\"incomingServerProtocol\":\"pop3s\",\"outgoingServerAuth\":\"true\",\"outgoingServerProtocol\":\"smtp\",\"status\":2,\"accountName\":\"info@bambooairways.com\",\"serviceGroup\":\"info\",\"system\":null,\"skillId\":null,\"currentUid\":null,\"siteId\":663505,\"signatureConfig\":null,\"timeStoreMail\":1000,\"startDate\":null,\"createBy\":\"hantt1\",\"createDate\":1602664552000,\"updateBy\":\"hantt1\",\"updateDate\":null,\"isSSL\":true,\"isSSLOutgoing\":true,\"isUpdateEmail\":false,\"newPassword\":null,\"currentPassword\":null,\"needUpdatePassword\":false}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:9059/api//sendTestEmail",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "9059",
+							"path": [
+								"api",
+								"",
+								"sendTestEmail"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewEmail",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"statusCode\": null,\n    \"ticketId\": 142482,\n    \"sourceId\": 30750,\n    \"createDate\": 1641358187000,\n    \"refId\": \"125302\",\n    \"customerId\": 291140,\n    \"ticketStatus\": 1,\n    \"responseStatus\": 2,\n    \"priorityId\": 1,\n    \"resolveSla\": null,\n    \"firstResponeSla\": null,\n    \"agentProcess\": \"hungnn22\",\n    \"firstResponeDate\": 1641377475000,\n    \"resolveDate\": 1641377407000,\n    \"assignDate\": null,\n    \"secondResponeDate\": null,\n    \"agentId\": \"f7cb4b256a609f7c4db64304bb2453a8\",\n    \"ticketSlaId\": null,\n    \"companySiteId\": 673035,\n    \"siteId\": \"673035\",\n    \"requestDate\": 1641358187000,\n    \"lastRequestDate\": 1641377475000,\n    \"ticketTypeId\": null,\n    \"ticketTypeId1\": null,\n    \"ticketTypeId2\": null,\n    \"ticketTypeId3\": null,\n    \"ticketTypeIdFull\": null,\n    \"ticketTypeTemp\": null,\n    \"secondResponeSla\": null,\n    \"cooperateId\": null,\n    \"subject\": \"tetst\",\n    \"customerName\": \"hungnn22@viettel.com.vn\",\n    \"sourceName\": \"mycc1@viettel.com.vn\",\n    \"chanelId\": 2,\n    \"overDue\": 0,\n    \"fromDate\": null,\n    \"toDate\": null,\n    \"fromDateStr\": null,\n    \"toDateStr\": null,\n    \"customerCode\": \"hungnn22@viettel.com.vn\",\n    \"agentAssignId\": \"\",\n    \"agentAssign\": \"hungnn22\",\n    \"userLogin\": null,\n    \"readed\": 1,\n    \"emailFrom\": null,\n    \"ticketTypeName\": \"\",\n    \"ticketStatusTemp\": null,\n    \"priorityTemp\": null,\n    \"postTypeId\": 0,\n    \"postTypeName\": \"\",\n    \"postCustomer\": 0,\n    \"agentType\": null,\n    \"reason\": \"\",\n    \"process\": \"\",\n    \"agentSiteId\": null,\n    \"requestDateStr\": \"05/01/2022 04:49:47\",\n    \"statusTags\": [],\n    \"responseStatusTags\": [],\n    \"priorityTags\": [],\n    \"ticketSourceTags\": [],\n    \"offset\": 0,\n    \"limit\": 0,\n    \"ticketSourceDTO\": {\n        \"keySet\": null,\n        \"sourceId\": 0,\n        \"sourceCode\": \"mycc1@viettel.com.vn\",\n        \"sourceName\": null,\n        \"chanelId\": null,\n        \"siteId\": null,\n        \"createDate\": null,\n        \"signarureConfig\": null,\n        \"status\": null,\n        \"errorCode\": null,\n        \"detail\": null\n    },\n    \"agentRole\": null,\n    \"agentAssignTemp\": null,\n    \"agentAssignIdTemp\": null,\n    \"siteAssignIdTemp\": null,\n    \"slaDate\": null,\n    \"slaProcessDate\": null,\n    \"slaCooperateDate\": null,\n    \"postId\": \"\",\n    \"lastUpdateTime\": 1641379249000,\n    \"siteName\": \"dss\",\n    \"companySiteName\": \"dss\",\n    \"agentCompanyId\": null,\n    \"historyTicket\": null,\n    \"ignored\": 0,\n    \"reasonCatItemId\": null,\n    \"problemCatItemId\": 0,\n    \"assignOption\": null,\n    \"content\": \"<html> <head>   <meta http-equiv=\\\"content-type\\\" content=\\\"text/html; charset=UTF-8\\\">  </head>  <body>   <p>setset<br> </p>   <div class=\\\"moz-signature\\\">   --    <br>    <title>Email Signature</title>    <meta content=\\\"text/html; charset=UTF-8\\\" http-equiv=\\\"Content-Type\\\">    <div>     <i> Thank and Best Regards </i>    </div>    <div>    -----------------------------------------------   </div>    <table style=\\\"width: 800px;font-size: 12pt;font-family: Arial,        sans-serif;\\\" cellspacing=\\\"0\\\" cellpadding=\\\"0\\\">     <tbody>      <tr>       <td style=\\\"font-size: 12pt; font-family: Arial, sans-serif;\\\"><strong><span style=\\\"text-transform:uppercase; font-size: 12pt;                  font-family: Times New Roman; color:#036b73;\\\">&nbsp;&nbsp;&nbsp;Nguyễn Nam Hưng</span></strong><br> </td>      </tr>      <tr>       <td style=\\\"font-size: 12pt; line-height:12px; font-family:              Arial, sans-serif; padding-top: 5px; vertical-align:top;\\\" valign=\\\"top\\\"> <span style=\\\"line-height:25px; font-size:                12pt; font-family: Times New Roman, serif;                color:#312dbf\\\"><strong>&nbsp;&nbsp;&nbsp;Trung tâm Sản phẩm và Giải pháp – Tổng Công ty Giải pháp Doanh Nghiệp Viettel</strong><br> </span> <span style=\\\"line-height:15px; font-size: 12pt;                font-family: Times New Roman, serif; color:#312dbf\\\">Address: Tầng 21, Toà nhà Viettel, Số 1 Phố Trần Hữu Dực, Mỹ Đình, Nam Từ Liêm, Hà Nội.<br> </span> <span style=\\\"line-height:15px; font-size: 12pt;                font-family: Times New Roman, serif; color:#312dbf\\\">Phone: + 84 943 181 606<br> </span> <span style=\\\"line-height:15px; font-size: 12pt;                font-family: Times New Roman, serif; color:#312dbf;\\\">Email: <a class=\\\"moz-txt-link-abbreviated\\\" href=\\\"mailto:hungnn22@viettel.com.vn\\\">hungnn22@viettel.com.vn</a><br> </span> </td>      </tr>     </tbody>    </table>   </div>    </body></html>\",\n    \"customerPhone\": null,\n    \"viewType\": null,\n    \"ticketCode\": null,\n    \"orderType\": 0,\n    \"classifyRequireId\": null,\n    \"availableTicket\": null,\n    \"sourceCode\": null,\n    \"isTicketChat\": null,\n    \"customerEmail\": null,\n    \"requestTime\": null,\n    \"viewCust\": false,\n    \"taglist\": null,\n    \"ticketTagList\": null,\n    \"tagIdList\": null,\n    \"chatType\": null,\n    \"evaluation\": 0,\n    \"keyword\": null,\n    \"errorCode\": null,\n    \"customizeFieldObjectDTOList\": null,\n    \"functionCode\": null,\n    \"sourceReference\": null,\n    \"ticketType\": null,\n    \"listContact\": null,\n    \"eventType\": null,\n    \"siteProcessId\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9959/api/viewTicket",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9959",
+							"path": [
+								"api",
+								"viewTicket"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getNotesEmailTicket",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"statusCode\": null,\n    \"ticketId\": 141521,\n    \"sourceId\": 32506,\n    \"createDate\": 1640513175000,\n    \"refId\": \"125293\",\n    \"customerId\": 272249,\n    \"ticketStatus\": 1,\n    \"responseStatus\": 2,\n    \"priorityId\": 1,\n    \"resolveSla\": null,\n    \"firstResponeSla\": null,\n    \"agentProcess\": \"hungnn22\",\n    \"firstResponeDate\": 1640536835000,\n    \"resolveDate\": 1640517996000,\n    \"assignDate\": null,\n    \"secondResponeDate\": 1640618982000,\n    \"agentId\": \"\",\n    \"ticketSlaId\": null,\n    \"companySiteId\": 673035,\n    \"siteId\": \"673035\",\n    \"requestDate\": 1640513175000,\n    \"lastRequestDate\": 1640618982000,\n    \"ticketTypeId\": null,\n    \"ticketTypeId1\": null,\n    \"ticketTypeId2\": null,\n    \"ticketTypeId3\": null,\n    \"ticketTypeIdFull\": null,\n    \"ticketTypeTemp\": null,\n    \"secondResponeSla\": null,\n    \"cooperateId\": null,\n    \"subject\": \"subject\",\n    \"customerName\": \"mycc_test@viettel.com.vn\",\n    \"sourceName\": \"mycc1@viettel.com.vn\",\n    \"chanelId\": 2,\n    \"overDue\": 0,\n    \"fromDate\": null,\n    \"toDate\": null,\n    \"fromDateStr\": null,\n    \"toDateStr\": null,\n    \"customerCode\": \"mycc_test@viettel.com.vn\",\n    \"agentAssignId\": \"\",\n    \"agentAssign\": \"hungnn22\",\n    \"userLogin\": null,\n    \"readed\": 1,\n    \"emailFrom\": null,\n    \"ticketTypeName\": \"\",\n    \"ticketStatusTemp\": null,\n    \"priorityTemp\": null,\n    \"postTypeId\": 0,\n    \"postTypeName\": \"\",\n    \"postCustomer\": 0,\n    \"agentType\": null,\n    \"reason\": \"\",\n    \"process\": \"\",\n    \"agentSiteId\": null,\n    \"requestDateStr\": \"26/12/2021 10:06:15\",\n    \"statusTags\": [],\n    \"responseStatusTags\": [],\n    \"priorityTags\": [],\n    \"ticketSourceTags\": [],\n    \"offset\": 0,\n    \"limit\": 0,\n    \"ticketSourceDTO\": {\n        \"keySet\": null,\n        \"sourceId\": 0,\n        \"sourceCode\": \"mycc1@viettel.com.vn\",\n        \"sourceName\": null,\n        \"chanelId\": null,\n        \"siteId\": null,\n        \"createDate\": null,\n        \"signarureConfig\": null,\n        \"status\": null,\n        \"errorCode\": null,\n        \"detail\": null\n    },\n    \"agentRole\": null,\n    \"agentAssignTemp\": null,\n    \"agentAssignIdTemp\": null,\n    \"siteAssignIdTemp\": null,\n    \"slaDate\": null,\n    \"slaProcessDate\": null,\n    \"slaCooperateDate\": null,\n    \"postId\": \"\",\n    \"lastUpdateTime\": 1640618982000,\n    \"siteName\": \"etc\",\n    \"companySiteName\": \"etc\",\n    \"agentCompanyId\": null,\n    \"historyTicket\": null,\n    \"ignored\": 0,\n    \"reasonCatItemId\": null,\n    \"problemCatItemId\": 0,\n    \"assignOption\": null,\n    \"content\": \"<html> <head></head> <body>  send1   <br>   <br> </body></html>\",\n    \"customerPhone\": null,\n    \"viewType\": null,\n    \"ticketCode\": null,\n    \"orderType\": 0,\n    \"classifyRequireId\": null,\n    \"availableTicket\": null,\n    \"sourceCode\": null,\n    \"isTicketChat\": null,\n    \"customerEmail\": null,\n    \"requestTime\": null,\n    \"viewCust\": false,\n    \"taglist\": null,\n    \"ticketTagList\": null,\n    \"tagIdList\": null,\n    \"chatType\": null,\n    \"evaluation\": 0,\n    \"keyword\": null,\n    \"errorCode\": null,\n    \"customizeFieldObjectDTOList\": null,\n    \"functionCode\": null,\n    \"sourceReference\": null,\n    \"ticketType\": null,\n    \"listContact\": null,\n    \"eventType\": null,\n    \"siteProcessId\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9000/api/v2/getNotesTicketEmail",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9000",
+							"path": [
+								"api",
+								"v2",
+								"getNotesTicketEmail"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CHATBOT",
+			"item": [
+				{
+					"name": "Bitel",
+					"item": [
+						{
+							"name": "GetChatbotBearToken",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											"postman.setEnvironmentVariable(\"bitel_chatbot_token\", jsonData.bearerToken);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"Username\":\"bitel.bridge\",\n\"Password\": \"Bitel@2020\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://zyxmetst.com/zyxme/bridge/Api/ProcessAuthentication/GenerateBearerToken",
+									"protocol": "https",
+									"host": [
+										"zyxmetst",
+										"com"
+									],
+									"path": [
+										"zyxme",
+										"bridge",
+										"Api",
+										"ProcessAuthentication",
+										"GenerateBearerToken"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "SendMessageChatBot",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bitel_chatbot_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"SiteType\": \"WEBM\",\n    \"PersonId\": \"234194\",\n    \"Message\": \"12222222222222222222222\",\n    \"SiteId\": \"072130451\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://bitel.zyxmeapp.com/bitel/bridge/api/processzyxme/UseZyxMeService",
+									"protocol": "https",
+									"host": [
+										"bitel",
+										"zyxmeapp",
+										"com"
+									],
+									"path": [
+										"bitel",
+										"bridge",
+										"api",
+										"processzyxme",
+										"UseZyxMeService"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateExtractData",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bitel_chatbot_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"variableName\": \"FirstName\",\n    \"variableValue\": \"hungnn22\",\n    \"variableType\": \"string\",\n    \"personId\": \"234194\",\n    \"corpId\": \"1\",\n    \"orgId\": \"1\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://bitel.zyxmeapp.com/bitel/bridge/api/processzyxme/UpdateExtraData",
+									"protocol": "https",
+									"host": [
+										"bitel",
+										"zyxmeapp",
+										"com"
+									],
+									"path": [
+										"bitel",
+										"bridge",
+										"api",
+										"processzyxme",
+										"UpdateExtraData"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetExtraData",
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": [
+										{
+											"key": "token",
+											"value": "{{bitel_chatbot_token}}",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"VariableName\": \"hungnn22\",\n    \"PersonId\": \"234189\",\n    \"CorpId\": 1,\n    \"OrgId\": 1\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://bitel.zyxmeapp.com/bitel/bridge/api/processzyxme/GetExtraData",
+									"protocol": "https",
+									"host": [
+										"bitel",
+										"zyxmeapp",
+										"com"
+									],
+									"path": [
+										"bitel",
+										"bridge",
+										"api",
+										"processzyxme",
+										"GetExtraData"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Mytel",
+					"item": [
+						{
+							"name": "New Request",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"object\":\"page\",\"entry\":[{\"id\":\"14121421\",\"time\":1670294466508,\"messaging\":[{\"timestamp\":1670294466508,\"sender\":{\"id\":\"14121421\"},\"recipient\":{\"id\":\"60d306b77072bc2e6223c289\"},\"postback\":{\"title\":\"All MyID Service\",\"payload\":\"BSCENARIO_637b3b38f75a7c64a30b2d23_62aedbb748f3a950c02d0d30_-1_QWxsIE15SUQgU2VydmljZQ\\u003d\\u003d\"}}]}]}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://chatbotwebhook.mytel.com.mm/webchatMytel",
+									"protocol": "https",
+									"host": [
+										"chatbotwebhook",
+										"mytel",
+										"com",
+										"mm"
+									],
+									"path": [
+										"webchatMytel"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "WHATAPP_API",
+			"item": [
+				{
+					"name": "SendMessage",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "Mycc_hungnn22",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "Viettel@123",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"scenarioKey\": \"47F2109B89A5F81A2534FD6DE1FA0B80\",\n  \"destinations\": [\n    {\n      \"to\": {\n        \"phoneNumber\": \"84943181606\"\n      }\n    }\n  ],\n  \"whatsApp\": {\n    \"text\": \"Hola Ju\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://3vzlnw.api.infobip.com/omni/1/advanced",
+							"protocol": "https",
+							"host": [
+								"3vzlnw",
+								"api",
+								"infobip",
+								"com"
+							],
+							"path": [
+								"omni",
+								"1",
+								"advanced"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SERVICES_CAMPAIGN",
+			"item": [
+				{
+					"name": "ImportFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8999/ipcc/customer/importFile?file&customerListId&language",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8999",
+							"path": [
+								"ipcc",
+								"customer",
+								"importFile"
+							],
+							"query": [
+								{
+									"key": "file",
+									"value": null
+								},
+								{
+									"key": "customerListId",
+									"value": null
+								},
+								{
+									"key": "language",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "ZALO_API",
+			"item": []
+		},
+		{
+			"name": "CHAT_SERVER",
+			"item": [
+				{
+					"name": "getConversationDetail",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:8989/api/conversation/1235549",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"conversation",
+								"1235549"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getThreadConversation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA4OWE5Y2Y4ZWM2NjlhZWM3YzU0OWQ0NmUyZWVlNjlkIn0.eyJpc3MiOiJrYXpvbyIsImlkZW50aXR5X3NpZyI6IjFvRURra25VRG5jMXZVSDQ4OWhJZHBoS05JWkp4Q2toR08yWm51RFgzLWMiLCJhY2NvdW50X2lkIjoiZTUyZGM4ZTlmMWJmMDg5NzlmMjljZDU2NmMyNWM3NjkiLCJvd25lcl9pZCI6IjNiMTQ4NmNlZTg5YmI1Y2VmOWU2NTAwMjc1NzQ0YjJlIiwibWV0aG9kIjoiY2JfdXNlcl9hdXRoIiwiZXhwIjoxNjYzMDI1NDUxfQ.icoSmBsmRvl6cy-kaKN0KrAwu2-srQx7gQxE04UB3hHm2B9naMrqO0ujQ_eHNTEsFT6NvgcVby1I52Zwcc_eUTq6rk4KD1WyBrf_HQZ-PaEzcoKwsY57X6EcsyEhBBq4OB0vPKPesX-FwaiLzYZS4pY2NTdXEvkCdFco6zE9iV5XYQt54hr5ETFPhrMD2X3sOmbcz8cEonXC6uq8y0v3_GmiZ8OERDjyQR_o_KVPvC-n6f6hqycMODbo9BIXOXvfp8h8l_wm772g0YGaSUal2GW8RUSztRtEhC24t7U7nNzHDAthlKvy-WRZNtJ62lpte0Aaj180Zh28lm0XtQgiAw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:8989/api/conversation/thread/1",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"conversation",
+								"thread",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllConversations",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA4OWE5Y2Y4ZWM2NjlhZWM3YzU0OWQ0NmUyZWVlNjlkIn0.eyJpc3MiOiJrYXpvbyIsImlkZW50aXR5X3NpZyI6IjFvRURra25VRG5jMXZVSDQ4OWhJZHBoS05JWkp4Q2toR08yWm51RFgzLWMiLCJhY2NvdW50X2lkIjoiZTUyZGM4ZTlmMWJmMDg5NzlmMjljZDU2NmMyNWM3NjkiLCJvd25lcl9pZCI6IjNiMTQ4NmNlZTg5YmI1Y2VmOWU2NTAwMjc1NzQ0YjJlIiwibWV0aG9kIjoiY2JfdXNlcl9hdXRoIiwiZXhwIjoxNjYzMDI1NDUxfQ.icoSmBsmRvl6cy-kaKN0KrAwu2-srQx7gQxE04UB3hHm2B9naMrqO0ujQ_eHNTEsFT6NvgcVby1I52Zwcc_eUTq6rk4KD1WyBrf_HQZ-PaEzcoKwsY57X6EcsyEhBBq4OB0vPKPesX-FwaiLzYZS4pY2NTdXEvkCdFco6zE9iV5XYQt54hr5ETFPhrMD2X3sOmbcz8cEonXC6uq8y0v3_GmiZ8OERDjyQR_o_KVPvC-n6f6hqycMODbo9BIXOXvfp8h8l_wm772g0YGaSUal2GW8RUSztRtEhC24t7U7nNzHDAthlKvy-WRZNtJ62lpte0Aaj180Zh28lm0XtQgiAw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:8989/api/conversations",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"conversations"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSessionsByUser",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA4OWE5Y2Y4ZWM2NjlhZWM3YzU0OWQ0NmUyZWVlNjlkIn0.eyJpc3MiOiJrYXpvbyIsImlkZW50aXR5X3NpZyI6IjFvRURra25VRG5jMXZVSDQ4OWhJZHBoS05JWkp4Q2toR08yWm51RFgzLWMiLCJhY2NvdW50X2lkIjoiZTUyZGM4ZTlmMWJmMDg5NzlmMjljZDU2NmMyNWM3NjkiLCJvd25lcl9pZCI6IjNiMTQ4NmNlZTg5YmI1Y2VmOWU2NTAwMjc1NzQ0YjJlIiwibWV0aG9kIjoiY2JfdXNlcl9hdXRoIiwiZXhwIjoxNjYzMDI1NDUxfQ.icoSmBsmRvl6cy-kaKN0KrAwu2-srQx7gQxE04UB3hHm2B9naMrqO0ujQ_eHNTEsFT6NvgcVby1I52Zwcc_eUTq6rk4KD1WyBrf_HQZ-PaEzcoKwsY57X6EcsyEhBBq4OB0vPKPesX-FwaiLzYZS4pY2NTdXEvkCdFco6zE9iV5XYQt54hr5ETFPhrMD2X3sOmbcz8cEonXC6uq8y0v3_GmiZ8OERDjyQR_o_KVPvC-n6f6hqycMODbo9BIXOXvfp8h8l_wm772g0YGaSUal2GW8RUSztRtEhC24t7U7nNzHDAthlKvy-WRZNtJ62lpte0Aaj180Zh28lm0XtQgiAw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:8989/api/connections/session/user/{{kz_user_id}}",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"connections",
+								"session",
+								"user",
+								"{{kz_user_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllSessionsByMonitor",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA4OWE5Y2Y4ZWM2NjlhZWM3YzU0OWQ0NmUyZWVlNjlkIn0.eyJpc3MiOiJrYXpvbyIsImlkZW50aXR5X3NpZyI6IjFvRURra25VRG5jMXZVSDQ4OWhJZHBoS05JWkp4Q2toR08yWm51RFgzLWMiLCJhY2NvdW50X2lkIjoiZTUyZGM4ZTlmMWJmMDg5NzlmMjljZDU2NmMyNWM3NjkiLCJvd25lcl9pZCI6IjNiMTQ4NmNlZTg5YmI1Y2VmOWU2NTAwMjc1NzQ0YjJlIiwibWV0aG9kIjoiY2JfdXNlcl9hdXRoIiwiZXhwIjoxNjYzMDI1NDUxfQ.icoSmBsmRvl6cy-kaKN0KrAwu2-srQx7gQxE04UB3hHm2B9naMrqO0ujQ_eHNTEsFT6NvgcVby1I52Zwcc_eUTq6rk4KD1WyBrf_HQZ-PaEzcoKwsY57X6EcsyEhBBq4OB0vPKPesX-FwaiLzYZS4pY2NTdXEvkCdFco6zE9iV5XYQt54hr5ETFPhrMD2X3sOmbcz8cEonXC6uq8y0v3_GmiZ8OERDjyQR_o_KVPvC-n6f6hqycMODbo9BIXOXvfp8h8l_wm772g0YGaSUal2GW8RUSztRtEhC24t7U7nNzHDAthlKvy-WRZNtJ62lpte0Aaj180Zh28lm0XtQgiAw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:8989/api/connections/monitor/subscribers/{{kz_user_id}}",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"connections",
+								"monitor",
+								"subscribers",
+								"{{kz_user_id}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getThreadConversation Copy",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA4OWE5Y2Y4ZWM2NjlhZWM3YzU0OWQ0NmUyZWVlNjlkIn0.eyJpc3MiOiJrYXpvbyIsImlkZW50aXR5X3NpZyI6IjFvRURra25VRG5jMXZVSDQ4OWhJZHBoS05JWkp4Q2toR08yWm51RFgzLWMiLCJhY2NvdW50X2lkIjoiZTUyZGM4ZTlmMWJmMDg5NzlmMjljZDU2NmMyNWM3NjkiLCJvd25lcl9pZCI6IjNiMTQ4NmNlZTg5YmI1Y2VmOWU2NTAwMjc1NzQ0YjJlIiwibWV0aG9kIjoiY2JfdXNlcl9hdXRoIiwiZXhwIjoxNjYzMDI1NDUxfQ.icoSmBsmRvl6cy-kaKN0KrAwu2-srQx7gQxE04UB3hHm2B9naMrqO0ujQ_eHNTEsFT6NvgcVby1I52Zwcc_eUTq6rk4KD1WyBrf_HQZ-PaEzcoKwsY57X6EcsyEhBBq4OB0vPKPesX-FwaiLzYZS4pY2NTdXEvkCdFco6zE9iV5XYQt54hr5ETFPhrMD2X3sOmbcz8cEonXC6uq8y0v3_GmiZ8OERDjyQR_o_KVPvC-n6f6hqycMODbo9BIXOXvfp8h8l_wm772g0YGaSUal2GW8RUSztRtEhC24t7U7nNzHDAthlKvy-WRZNtJ62lpte0Aaj180Zh28lm0XtQgiAw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:8989/api/conversation/thread/1223911",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "8989",
+							"path": [
+								"api",
+								"conversation",
+								"thread",
+								"1223911"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "TICKET_REPORT",
+			"item": [
+				{
+					"name": "searchKpiForDay",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"agentProcess\": \"hungnn30\",\n    \"agentRole\": \"ADMIN_COMPANY\",\n    \"chanelId\": 5,\n    \"companySiteId\": \"653035\",\n    \"language\": \"vi\",\n    \"limit\": 10,\n    \"limitRow\": 0,\n    \"maxRow\": 0,\n    \"offset\": 0,\n    \"showCompany\": false,\n    \"showSite\": true,\n    \"siteId\": 653035,\n    \"siteName\": null,\n    \"sourceId\": \"\",\n    \"sourceName\": \"Select\",\n    \"sourceCode\": \"\",\n    \"statusTags\": [],\n    \"ticketSourceTags\": [],\n    \"dropN\": 0,\n    \"second\": 0,\n    \"reportType\": 0,\n    \"showDaily\": true,\n    \"showHours\": false,\n    \"fromHour\": 0,\n    \"toHour\": 23,\n    \"timezone\": 420,\n    \"timeBaseFromType\": \"ivr\",\n    \"fromDateStr\": \"2022-09-25T17:00:00.000Z\",\n    \"toDateStr\": \"2022-10-03T16:59:59.000Z\",\n    \"fromDateResolveValue\": null,\n    \"toDateResolveValue\": null,\n    \"sourceTags\": [\n        {\n            \"selected\": true,\n            \"disabled\": false,\n            \"text\": \"test_sms\\n                                    \",\n            \"id\": \"1e7887868058e5337573f6a7c48f5308\",\n            \"title\": \"\",\n            \"_resultId\": \"select2-s1fv-result-6l5n-1e7887868058e5337573f6a7c48f5308\",\n            \"element\": {}\n        }\n    ],\n    \"fromDate\": \"2022-09-25T17:00:00.000Z\",\n    \"toDate\": \"2022-10-03T16:59:59.000Z\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:9975/services_ticket_report/api/searchKpiForDay",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "9975",
+							"path": [
+								"services_ticket_report",
+								"api",
+								"searchKpiForDay"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateKpiStatiticReport",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{access_token}}",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"fromDate\": \"2023-01-01T00:00:00.000Z\",\n    \"toDate\": \"2023-01-01T23:59:59.000Z\",\n    \"reimport\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:9975/services_ticket_report/api//updateKpiStatiticReport",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "9975",
+							"path": [
+								"services_ticket_report",
+								"api",
+								"",
+								"updateKpiStatiticReport"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HTTP_FILE_SERVER",
+			"item": [
+				{
+					"name": "UploadFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "",
+									"type": "file",
+									"src": "/home/vts-hungnn22/Pictures/Selection_006.png"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8882/u?filename=1641784673010.remmina-2022-10-5-6:33:49.629098.png&name=fileUpIgnoreAutoDeleteResize",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8882",
+							"path": [
+								"u"
+							],
+							"query": [
+								{
+									"key": "filename",
+									"value": "1641784673010.remmina-2022-10-5-6:33:49.629098.png"
+								},
+								{
+									"key": "name",
+									"value": "fileUpIgnoreAutoDeleteResize"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "https://myccpublic.bitel.com.pe:9082/u",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,vi;q=0.8"
+							},
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "Origin",
+								"value": "https://myccpublic.bitel.com.pe:9443"
+							},
+							{
+								"key": "Referer",
+								"value": "https://myccpublic.bitel.com.pe:9443/"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-site"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6ImM3OWM0NjExNmNjNzdiZDI5Nzk0YTI4NjgwN2EwN2Y3In0.eyJpc3MiOiJrYXpvbyIsImlkZW50aXR5X3NpZyI6Ik0tdU9MNmRyOFI2aVQ1WFhQYWZQMHlEUEhfQ2Y5X29Pc0NZOWhwVThmOG8iLCJhY2NvdW50X2lkIjoiMzEwZDg5MGM0M2Q4ZWM1NjVmMjk5NmU3MGM3NjBiZGUiLCJvd25lcl9pZCI6IjcwZjVmOGMyYjc4NWY5NTc1YTZmYTViNjNkODQyODdiIiwibWV0aG9kIjoiY2JfdXNlcl9hdXRoIiwiZXhwIjoxNjc4ODYwMzIyfQ.O7nHsdc6vTH200G0XG9TA4FIjt5pYIBandWKKFbIJAGiF24o-hFkO-xQjFXrFUF6rM5vrJO8jLCbpoKONfdUm-TlIUHnn57NcL959mzJwVUVaVtwsb78T0U8UHDLr80x3BD2V6vcg_Fxay1AJ7iuaMuLKt8UKY0TlQxoS1xPT5tRlP-D6efl_IsDEmZ3CALDaZJtVcVmKYUWa_SiXZzwRVYftJtvkr33L_0GicgqXzfVBi3Rea3uUA9kj4YrG_DWtpX8wG1D3jvZM1fpIowF5189_Rd6xpzG0QaMrjebCIzGXZ1NahUH8zYQcQR5MBelfrIJzRctmKfZwocnMA8mhQ"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\"Google Chrome\";v=\"111\", \"Not(A:Brand\";v=\"8\", \"Chromium\";v=\"111\""
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "sec-ch-ua-platform",
+								"value": "\"Linux\""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fileUpIgnoreAutoDeleteResize",
+									"type": "file",
+									"src": "/home/vts-hungnn22/Downloads/download (1).png"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://myccpublic.bitel.com.pe:9082/u",
+							"protocol": "https",
+							"host": [
+								"myccpublic",
+								"bitel",
+								"com",
+								"pe"
+							],
+							"port": "9082",
+							"path": [
+								"u"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "KAZOO",
+			"item": [
+				{
+					"name": "Restrict",
+					"item": [
+						{
+							"name": "restrict",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/token_restrictions",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"token_restrictions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateRestrict",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/token_restrictions",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"token_restrictions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Restart",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/token_restrictions",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"token_restrictions"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Click2Call",
+					"item": [
+						{
+							"name": "putCallflowToClick2Call",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"data\":{\"name\":\"{{extension}}\", \"auth_required\":true, \"extension\":\"{{extension}}\",\"dial_first\":\"contact\"}}"
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/clicktocall",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"clicktocall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllConfigClick2Call",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/clicktocall",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"clicktocall"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "click2Call",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/clicktocall/{{click2call}}/connect?contact={{contact}}",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"clicktocall",
+										"{{click2call}}",
+										"connect"
+									],
+									"query": [
+										{
+											"key": "contact",
+											"value": "{{contact}}"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "click2callDetail",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/clicktocall/{{click2call}}",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"clicktocall",
+										"{{click2call}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "editClick2Call",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"data\":{\"name\":\"{{extension}}\", \"auth_required\":true, \"extension\":\"{{extension}}\" , \"dial_first\":\"contact\" } }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/clicktocall/{{click2call}}",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"clicktocall",
+										"{{click2call}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createMediaFile",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "text"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/media/9ab93de0925c915550adb7fb11cabb77/raw",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"media",
+										"9ab93de0925c915550adb7fb11cabb77",
+										"raw"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteClick2Call",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"var jsonData = JSON.parse(responseBody);",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"data\":{\"name\":\"{{extension}}\", \"auth_required\":true, \"extension\":\"{{extension}}\" , \"dial_first\":\"contact\"} }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/clicktocall/4da8ad02a1762e7bba8d72e957af5d6b",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"clicktocall",
+										"4da8ad02a1762e7bba8d72e957af5d6b"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CreateDevice",
+					"item": [
+						{
+							"name": "getDeviceInfo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"hashing\": \"{{hashing}}\",\n    \"data\": {\n        \"name\": \"{{contact}}\",\n        \"sip\": {}\n    }\n}"
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:6201/v2/accounts/{{account_id}}/devices",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "6201",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"devices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createDevice",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"hashing\": \"{{hashing}}\",\n  \"data\":{\n    \t\"name\":\"{{contact}}\",\n  \t\t\"sip\": {\n      \t\t\"password\": \"123456\"\n        }\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:6201/v2/accounts/{{account_id}}/devices",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "6201",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"devices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "KazooCreateDevice",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"data\": {\n    \"enabled\": true,\n    \"ringtones\": {},\n    \"mobile_extension_enabled\": false,\n    \"device_type\": \"softphone\",\n    \"media\": {\n      \"audio\": {\n        \"codecs\": [\n          \"PCMU\",\n          \"PCMA\"\n        ]\n      },\n      \"video\": {\n        \"codecs\": []\n      },\n      \"encryption\": {\n        \"enforce_security\": false,\n        \"methods\": []\n      },\n      \"webrtc\": true\n    },\n    \"sip\": {\n      \"username\": \"hungnn28\",\n      \"password\": \"123456\",\n      \"expire_seconds\": 360,\n      \"invite_format\": \"contact\",\n      \"method\": \"password\"\n    },\n    \"call_restriction\": {\n      \"tollfree_us\": {\n        \"action\": \"inherit\"\n      },\n      \"toll_us\": {\n        \"action\": \"inherit\"\n      },\n      \"emergency\": {\n        \"action\": \"inherit\"\n      },\n      \"caribbean\": {\n        \"action\": \"inherit\"\n      },\n      \"did_us\": {\n        \"action\": \"inherit\"\n      },\n      \"international\": {\n        \"action\": \"inherit\"\n      },\n      \"unknown\": {\n        \"action\": \"inherit\"\n      }\n    },\n    \"name\": \"hungnn28\"\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/devices",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"devices"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "KazooGetDevice",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/devices?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"devices"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "KazooDeleteDevice",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/devices/81ca1afc93d626199a94d7a40b884f2b",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"devices",
+										"81ca1afc93d626199a94d7a40b884f2b"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "createDeviceAndCallflow",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"hashing\": \"{{hashing}}\",\n  \"data\":{\n    \t\"name\":\"{{contact}}\",\n  \t\t\"sip\": {\n      \t\t\"password\": \"123456\"\n        }\n  }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:6201/v2/accounts/{{account_id}}/createDeviceAndCallflow",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "6201",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"createDeviceAndCallflow"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "KazooGetDeviceInfo",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/devices/fe78380a334e758233eedd5ed8e0b865",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"devices",
+										"fe78380a334e758233eedd5ed8e0b865"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateKazooDeviceInfo",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"sip\": {\n            \"username\": \"1tuan123\",\n            \"password\": \"09077363\",\n            \"expire_seconds\": 360,\n            \"invite_format\": \"contact\",\n            \"method\": \"password\"\n        },\n        \"enabled\": true,\n        \"ringtones\": {},\n        \"mobile_extension_enabled\": false,\n        \"device_type\": \"softphone\",\n        \"media\": {\n            \"audio\": {\n                \"codecs\": [\n                    \"PCMU\",\n                    \"PCMA\"\n                ]\n            },\n            \"video\": {\n                \"codecs\": []\n            },\n            \"encryption\": {\n                \"enforce_security\": false,\n                \"methods\": []\n            },\n            \"webrtc\": true\n        },\n        \"call_restriction\": {\n            \"tollfree_us\": {\n                \"action\": \"inherit\"\n            },\n            \"toll_us\": {\n                \"action\": \"inherit\"\n            },\n            \"emergency\": {\n                \"action\": \"inherit\"\n            },\n            \"caribbean\": {\n                \"action\": \"inherit\"\n            },\n            \"did_us\": {\n                \"action\": \"inherit\"\n            },\n            \"international\": {\n                \"action\": \"inherit\"\n            },\n            \"unknown\": {\n                \"action\": \"inherit\"\n            }\n        },\n        \"name\": \"1tuan123\",\n        \"contact_list\": {},\n        \"exclude_from_queues\": false,\n        \"music_on_hold\": {},\n        \"mwi_unsolicitated_updates\": true,\n        \"register_overwrite_notify\": false,\n        \"suppress_unregister_notifications\": false,\n        \"id\": \"fe78380a334e758233eedd5ed8e0b865\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/devices?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"devices"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "VMBoxes",
+					"item": [
+						{
+							"name": "GetVMBoxes",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/vmboxes?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"vmboxes"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteVMBoxes",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/vmboxes/f0f3333964dc9247710abb49112b8085",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"vmboxes",
+										"f0f3333964dc9247710abb49112b8085"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateVMBoxes",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/vmboxes",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"vmboxes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Recording",
+					"item": [
+						{
+							"name": "getAudioRecording",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/recordings/{{media_id}}?accept=audio/mpeg",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"recordings",
+										"{{media_id}}"
+									],
+									"query": [
+										{
+											"key": "accept",
+											"value": "audio/mpeg"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getAllRecordings",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/recordings?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"recordings"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										},
+										{
+											"key": "",
+											"value": "",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "putAudioRecording",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n        \"call_id\": \"zzo645oandoo6mm3zqbo4553563cdb6q@10.18.5.64\",\n        \"callee_id_name\": \"\",\n        \"callee_id_number\": \"103\",\n        \"caller_id_name\": \"924012897\",\n        \"caller_id_number\": \"924012897\",\n        \"cdr_id\": \"202201-zzo645oandoo6mm3zqbo4553563cdb6q@10.18.5.64\",\n        \"content_type\": \"audio/mpeg\",\n        \"custom_channel_vars\": {\n            \"Account-ID\": \"310d890c43d8ec565f2996e70c760bde\",\n            \"Application-Name\": \"callflow\",\n            \"Application-Node\": \"kazoo_apps@ipcc1.local\",\n            \"Authorizing-Type\": \"resource\",\n            \"Bridge-ID\": \"zzo645oandoo6mm3zqbo4553563cdb6q@10.18.5.64\",\n            \"Call-Interaction-ID\": \"63808484718-1f01039d\",\n            \"CallFlow-ID\": \"037941277a595ea6234ff87ba3f6e1f7\",\n            \"Caller-Privacy-Hide-Name\": \"false\",\n            \"Caller-Privacy-Hide-Number\": \"false\",\n            \"Caller-Screen-Bit\": \"true\",\n            \"Channel-Authorized\": \"true\",\n            \"Ecallmgr-Node\": \"ecallmgr@ipcc1.local\",\n            \"Fetch-ID\": \"a7d483d0-9846-4ce7-8662-a50d7a728d79\",\n            \"Global-Resource\": \"false\",\n            \"Inception\": \"103@10.121.43.12\",\n            \"Media-Name\": \"a603ea55332f6676fb5ddee6fc640328.mp3\",\n            \"Media-Names\": \"a603ea55332f6676fb5ddee6fc640328.mp3\",\n            \"Media-Recorder\": \"kz_media_recording\",\n            \"Media-Recording-ID\": \"202112-b7b39057203e3c12b346138c31cbda97\",\n            \"Media-Recordings\": \"202112-b7b39057203e3c12b346138c31cbda97\",\n            \"Queue-ID\": \"cc775f7f1f4f894451b1b70dd4d075d5\",\n            \"Queue-Position\": \"1\",\n            \"Resource-ID\": \"993fcec6d73dc16e023f31c619b7f048\",\n            \"Resource-Type\": \"offnet-origination\",\n            \"Time-Limit\": \"3600\"\n        },\n        \"description\": \"recording a603ea55332f6676fb5ddee6fc640328.mp3\",\n        \"direction\": \"inbound\",\n        \"duration\": 75,\n        \"duration_ms\": 75160,\n        \"from\": \"924012897@10.221.2.9\",\n        \"interaction_id\": \"63808484718-1f01039d\",\n        \"media_source\": \"recorded\",\n        \"media_type\": \"mp3\",\n        \"name\": \"a603ea55332f6676fb5ddee6fc640328.mp3\",\n        \"origin\": \"untracked : +51103\",\n        \"request\": \"103@10.121.43.12\",\n        \"source_type\": \"kzc_recording\",\n        \"start\": 63808484770,\n        \"to\": \"103@10.121.43.12\",\n        \"id\": \"202112-b7b39057203e3c12b346138c31cbda97\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/recordings/",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"recordings",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "CreateUser",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"username\": \"vtz_mycc_super_admin_test\",\n        \"email\": \"thongna@viettel.com.vn\",\n        \"first_name\": \"vtz_mycc_super_admin_test\",\n        \"last_name\": \"vtz_mycc_super_admin_test\",\n        \"presence_id\": \"100\",\n        \"priv_level\": \"user\",\n        \"send_email_on_creation\": false,\n        \"password\": \"Halotel@2022@MYCC\",\n        \"userVsaId\": \"11950\",\n        \"companyId\": \"888888\",\n        \"siteId\": \"888888\",\n        \"roleCode\": \"agent\",\n        \"maxChatTrans\": \"5\",\n        \"maxTicketTrans\": \"5\",\n        \"ui_metadata\": {\n            \"origin\": \"voip\",\n            \"ui\": \"monster-ui\",\n            \"version\": \"4.1-63\"\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/users",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"users"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteUser",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/users/c7360041e6a8105599c9e0782375e9ba",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"users",
+										"c7360041e6a8105599c9e0782375e9ba"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetUser",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/users?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"users"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetUserFilterName",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/users?paginate=false&filter_email=hungnn22@viettel.com.vn",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"users"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										},
+										{
+											"key": "filter_email",
+											"value": "hungnn22@viettel.com.vn"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetUserDetail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/users/{{kz_user_id}}",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"users",
+										"{{kz_user_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateUserDetail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"username\": \"hantt2\",\r\n        \"email\": \"hantt2@viettel.com.vn\",\r\n        \"first_name\": \"Ha\",\r\n        \"last_name\": \"Nguyen\",\r\n        \"presence_id\": \"102\",\r\n        \"priv_level\": \"admin\",\r\n        \"send_email_on_creation\": false,\r\n        \"userVsaId\": 11542,\r\n        \"companyId\": \"673035\",\r\n        \"siteId\": \"673035\",\r\n        \"roleCode\": \"admin\",\r\n        \"caller_id\": {\r\n            \"internal\": {\r\n                \"name\": \"Ha Nguyen\",\r\n                \"number\": \"102\"\r\n            }\r\n        },\r\n        \"ui_metadata\": {\r\n            \"origin\": \"voip\",\r\n            \"ui\": \"monster-ui\",\r\n            \"version\": \"4.1-63\"\r\n        },\r\n        \"mobileNumber\": \"102\",\r\n        \"maxChatTrans\": \"11\",\r\n        \"maxTicketTrans\": \"11\",\r\n        \"call_restriction\": {},\r\n        \"contact_list\": {},\r\n        \"enabled\": true,\r\n        \"hotdesk\": {\r\n            \"enabled\": false,\r\n            \"keep_logged_in_elsewhere\": false,\r\n            \"require_pin\": false\r\n        },\r\n        \"music_on_hold\": {},\r\n        \"require_password_update\": false,\r\n        \"ringtones\": {},\r\n        \"verified\": false,\r\n        \"vm_to_email_enabled\": true,\r\n        \"queues\": [\r\n            \"3e56f75dd858a64bc66ea2cb6ca4f628\",\r\n            \"a3b77eda0986927fd40c6b8baa667cb1\",\r\n            \"2254fbd67db84422722746efdec2d9f7\",\r\n            \"035c0cc811fd9de9e67df2a279e20f6b\",\r\n            \"a6a017200f1d2b9717e5dd904ff1620b\"\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/users/{{kz_user_id}}",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"users",
+										"{{kz_user_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetRegistrations",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/users?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"users"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "CallFlow",
+					"item": [
+						{
+							"name": "GetCallflows",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/callflows?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"callflows"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCallflowsDetail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/callflows?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"callflows"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCallflows",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/callflows",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"callflows"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteCallflows",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/callflows/1154bbf38c854768a366a016ae4859a9",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"callflows",
+										"1154bbf38c854768a366a016ae4859a9"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Queues",
+					"item": [
+						{
+							"name": "CreateQueues",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"username\": \"vtz_mycc_super_admin_test\",\n        \"email\": \"thongna@viettel.com.vn\",\n        \"first_name\": \"vtz_mycc_super_admin_test\",\n        \"last_name\": \"vtz_mycc_super_admin_test\",\n        \"presence_id\": \"100\",\n        \"priv_level\": \"user\",\n        \"send_email_on_creation\": false,\n        \"password\": \"Halotel@2022@MYCC\",\n        \"userVsaId\": \"11950\",\n        \"companyId\": \"888888\",\n        \"siteId\": \"888888\",\n        \"roleCode\": \"agent\",\n        \"maxChatTrans\": \"5\",\n        \"maxTicketTrans\": \"5\",\n        \"ui_metadata\": {\n            \"origin\": \"voip\",\n            \"ui\": \"monster-ui\",\n            \"version\": \"4.1-63\"\n        }\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/queues",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"queues"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteQueues",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/queues/c7360041e6a8105599c9e0782375e9ba",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"queues",
+										"c7360041e6a8105599c9e0782375e9ba"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetQueues",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/queues?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"queues"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetQueueDetail",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/queues/{{kz_queue_id}}",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"queues",
+										"{{kz_queue_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateQueueDetail",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"username\": \"hantt2\",\r\n        \"email\": \"hantt2@viettel.com.vn\",\r\n        \"first_name\": \"Ha\",\r\n        \"last_name\": \"Nguyen\",\r\n        \"presence_id\": \"102\",\r\n        \"priv_level\": \"admin\",\r\n        \"send_email_on_creation\": false,\r\n        \"userVsaId\": 11542,\r\n        \"companyId\": \"673035\",\r\n        \"siteId\": \"673035\",\r\n        \"roleCode\": \"admin\",\r\n        \"caller_id\": {\r\n            \"internal\": {\r\n                \"name\": \"Ha Nguyen\",\r\n                \"number\": \"102\"\r\n            }\r\n        },\r\n        \"ui_metadata\": {\r\n            \"origin\": \"voip\",\r\n            \"ui\": \"monster-ui\",\r\n            \"version\": \"4.1-63\"\r\n        },\r\n        \"mobileNumber\": \"102\",\r\n        \"maxChatTrans\": \"11\",\r\n        \"maxTicketTrans\": \"11\",\r\n        \"call_restriction\": {},\r\n        \"contact_list\": {},\r\n        \"enabled\": true,\r\n        \"hotdesk\": {\r\n            \"enabled\": false,\r\n            \"keep_logged_in_elsewhere\": false,\r\n            \"require_pin\": false\r\n        },\r\n        \"music_on_hold\": {},\r\n        \"require_password_update\": false,\r\n        \"ringtones\": {},\r\n        \"verified\": false,\r\n        \"vm_to_email_enabled\": true,\r\n        \"queues\": [\r\n            \"3e56f75dd858a64bc66ea2cb6ca4f628\",\r\n            \"a3b77eda0986927fd40c6b8baa667cb1\",\r\n            \"2254fbd67db84422722746efdec2d9f7\",\r\n            \"035c0cc811fd9de9e67df2a279e20f6b\",\r\n            \"a6a017200f1d2b9717e5dd904ff1620b\"\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/users/{{kz_user_id}}",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"users",
+										"{{kz_user_id}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateQueueRoster",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": [\r\n        \"fe0848fd93c8cedcdea54deaed22d4cf\",\r\n        \"47b98efe22012f2f7d1b89c639c81781\"\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/queues/{{kz_queue_id}}/roster?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"queues",
+										"{{kz_queue_id}}",
+										"roster"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetQueueRoster",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"data\": {\r\n        \"username\": \"hantt2\",\r\n        \"email\": \"hantt2@viettel.com.vn\",\r\n        \"first_name\": \"Ha\",\r\n        \"last_name\": \"Nguyen\",\r\n        \"presence_id\": \"102\",\r\n        \"priv_level\": \"admin\",\r\n        \"send_email_on_creation\": false,\r\n        \"userVsaId\": 11542,\r\n        \"companyId\": \"673035\",\r\n        \"siteId\": \"673035\",\r\n        \"roleCode\": \"admin\",\r\n        \"caller_id\": {\r\n            \"internal\": {\r\n                \"name\": \"Ha Nguyen\",\r\n                \"number\": \"102\"\r\n            }\r\n        },\r\n        \"ui_metadata\": {\r\n            \"origin\": \"voip\",\r\n            \"ui\": \"monster-ui\",\r\n            \"version\": \"4.1-63\"\r\n        },\r\n        \"mobileNumber\": \"102\",\r\n        \"maxChatTrans\": \"11\",\r\n        \"maxTicketTrans\": \"11\",\r\n        \"call_restriction\": {},\r\n        \"contact_list\": {},\r\n        \"enabled\": true,\r\n        \"hotdesk\": {\r\n            \"enabled\": false,\r\n            \"keep_logged_in_elsewhere\": false,\r\n            \"require_pin\": false\r\n        },\r\n        \"music_on_hold\": {},\r\n        \"require_password_update\": false,\r\n        \"ringtones\": {},\r\n        \"verified\": false,\r\n        \"vm_to_email_enabled\": true,\r\n        \"queues\": [\r\n            \"3e56f75dd858a64bc66ea2cb6ca4f628\",\r\n            \"a3b77eda0986927fd40c6b8baa667cb1\",\r\n            \"2254fbd67db84422722746efdec2d9f7\",\r\n            \"035c0cc811fd9de9e67df2a279e20f6b\",\r\n            \"a6a017200f1d2b9717e5dd904ff1620b\"\r\n        ]\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/queues/{{kz_queue_id}}/roster?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"queues",
+										"{{kz_queue_id}}",
+										"roster"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetQueueRosterUAT",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/queues/{{kz_queue_id_new}}/roster?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"queues",
+										"{{kz_queue_id_new}}",
+										"roster"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getQueueDetailUAT",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/queues/{{kz_queue_id_new}}",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"queues",
+										"{{kz_queue_id_new}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Status",
+					"item": [
+						{
+							"name": "AgentStatus",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "https://{{DOMAIN}}:8081/v2/accounts/{{account_id}}/agents/status",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8081",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"agents",
+										"status"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Account(Dept)",
+					"item": [
+						{
+							"name": "GetAccount",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/vmboxes?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"vmboxes"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetAccountRestrictions",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/vmboxes?paginate=false",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"vmboxes"
+									],
+									"query": [
+										{
+											"key": "paginate",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "UpdateAccountRestrictions",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"data\": {\n        \"version\": \"cbcc-20181131\",\n        \"restrictions\": {\n            \"_\": {\n                \"admin\": {\n                    \"_\": [\n                        {\n                            \"rules\": {\n                                \"#\": [\n                                    \"_\"\n                                ]\n                            }\n                        }\n                    ]\n                },\n                \"user\": {\n                    \"token_auth\": [\n                        {\n                            \"rules\": {\n                                \"#\": [\n                                    \"GET\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"auth\": [\n                        {\n                            \"rules\": {\n                                \"#\": [\n                                    \"PUT\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"accounts\": [\n                        {\n                            \"rules\": {\n                                \"#\": [\n                                    \"GET\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"agents\": [\n                        {\n                            \"rules\": {\n                                \"/\": [\n                                    \"GET\"\n                                ],\n                                \"status\": [\n                                    \"GET\"\n                                ],\n                                \"*/status\": [\n                                    \"GET\",\n                                    \"POST\"\n                                ],\n                                \"*\": [\n                                    \"GET\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"users\": [\n                        {\n                            \"rules\": {\n                                \"#\": [\n                                    \"GET\"\n                                ]\n                            },\n                            \"devices\": {\n                                \"rules\": {\n                                    \"#\": [\n                                        \"GET\"\n                                    ]\n                                },\n                                \"_\": {\n                                    \"rules\": {\n                                        \"#\": []\n                                    }\n                                }\n                            }\n                        }\n                    ],\n                    \"callflows\": [\n                        {\n                            \"rules\": {\n                                \"#\": [\n                                    \"GET\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"devices\": [\n                        {\n                            \"rules\": {\n                                \"#\": [\n                                    \"GET\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"queues\": [\n                        {\n                            \"rules\": {\n                                \"eavesdrop\": [\n                                    \"PUT\"\n                                ],\n                                \"#\": [\n                                    \"GET\",\"POST\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"recordings\": [\n                        {\n                            \"rules\": {\n                                \"#\": [\n                                    \"GET\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"channels\": [\n                        {\n                            \"rules\": {\n                                \"*\": [\n                                    \"POST\"\n                                ]\n                            }\n                        }\n                    ],\n                    \"_\": [\n                        {\n                            \"rules\": {\n                                \"#\": []\n                            }\n                        }\n                    ]\n                }\n            }\n        },\n        \"id\": \"token_restrictions\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/token_restrictions",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"token_restrictions"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "DeleteAccount",
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"type": "text",
+										"value": "{{access_token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/0b4232bdbe559310f840a1024a1765cd",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"0b4232bdbe559310f840a1024a1765cd"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "CreateAccount",
+							"request": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n   \"data\":{\n      \"username\":\"VTC_IPCCTEST_agent\",\n      \"email\":\"teset@metfone.com.kh\",\n      \"first_name\":\"VTC_IPCCTEST_agent\",\n      \"last_name\":\"VTC_IPCCTEST_agent\",\n      \"presence_id\":\"132\",\n      \"priv_level\":\"user\",\n      \"send_email_on_creation\":false,\n      \"password\":\"hantt49@12345\",\n      \"userVsaId\":\"2143\",\n      \"companyId\":\"663134\",\n      \"siteId\":\"663134\",\n      \"roleCode\":\"agent\",\n      \"maxChatTrans\":\"5\",\n      \"maxTicketTrans\":\"5\",\n      \"ui_metadata\":{\n         \"origin\":\"voip\",\n         \"ui\":\"monster-ui\",\n         \"version\":\"4.1-63\"\n      }\n   }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/vmboxes",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "8001",
+									"path": [
+										"v2",
+										"accounts",
+										"{{account_id}}",
+										"vmboxes"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "SERVICES_TICKET",
+			"item": [
+				{
+					"name": "Timezone",
+					"item": [
+						{
+							"name": "getSiteTimeZone",
+							"request": {
+								"method": "GET",
+								"header": []
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Ticket",
+					"item": [
+						{
+							"name": "SearchTicket (Services-ticket)",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"agentRole\":\"ADMIN_COMPANY\",\"offset\":0,\"limit\":500,\"companySiteId\":\"663205\",\"siteId\":\"663205\",\"userLogin\":\"dantn\",\"language\":\"vi\",\"keyword\":\"\",\"evaluation\":0,\"fromDateStr\":63793155600,\"toDateStr\":63793328399,\"viewCust\":false}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:9010/api/v2/searchTicket",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "9010",
+									"path": [
+										"api",
+										"v2",
+										"searchTicket"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Authen",
+					"item": [
+						{
+							"name": "Authen (Services-ticket)",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"data\":{\"username\":\"vmy008245\",\"password\":\"Mytel@2020\",\"account_name\":\"mytel\",\"captcha\":\"\"}}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:9010/api/v2/user_auth",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "9010",
+									"path": [
+										"api",
+										"v2",
+										"user_auth"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "SERVICES_ACD",
+			"item": [
+				{
+					"name": "QueueDigital",
+					"item": [
+						{
+							"name": "createRebalanceQueue",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"description\": \"test description1\",\r\n        \"companySiteId\": 653035,\r\n        \"valueParam2\": \"Domain_sonnv69\",\r\n        \"type\": 2\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9919/api/createRebalanceQueues",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9919",
+									"path": [
+										"api",
+										"createRebalanceQueues"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "addQueue",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"description\": \"test description\",\r\n    \"companySiteId\": 653035,\r\n    \"valueParam2\": \"hung add service rebalance\",\r\n    \"type\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9919/api/addQueuesAndQuery",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9919",
+									"path": [
+										"api",
+										"addQueuesAndQuery"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "deleteRebalanceQueue",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"serviceCode\": \"hung add service rebalance\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://{{DOMAIN}}:9019/api/deleteRebalanceQueues",
+									"protocol": "https",
+									"host": [
+										"{{DOMAIN}}"
+									],
+									"port": "9019",
+									"path": [
+										"api",
+										"deleteRebalanceQueues"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "getRebalanceQueue",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"serviceCode\": \"hung add service rebalance\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://localhost:9919/api/rebalanceQueue/",
+									"protocol": "https",
+									"host": [
+										"localhost"
+									],
+									"port": "9919",
+									"path": [
+										"api",
+										"rebalanceQueue",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "reloadRebalanceQueue",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Auth-Token",
+										"value": "{{access_token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "[\r\n    {\r\n        \"valueParam2\": \"asdasdasd3f3\",\r\n        \"valueParam1\": \"103\"\r\n    },\r\n    {\r\n        \"valueParam2\": \"e18fa54c-8972-41ab-bdbb-95346669603a\",\r\n        \"valueParam1\": \"103\"\r\n    }\r\n]",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9919/api/reloadRebalanceQueues",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9919",
+									"path": [
+										"api",
+										"reloadRebalanceQueues"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "FACEBOOK_WEBHOOK",
+			"item": [
+				{
+					"name": "sendCommentToWebhook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entry\": [\n        {\n            \"changes\": [\n                {\n                    \"field\": \"feed\",\n                    \"value\": {\n                        \"created_time\": 1645690535,\n                        \"item\": \"comment\",\n                        \"post\": {\n                            \"updated_time\": \"2022-02-24T08:15:36+0000\",\n                            \"promotion_status\": \"inactive\",\n                            \"status_type\": \"added_photos\",\n                            \"is_published\": true,\n                            \"id\": \"1560631680862780_3164216563837609\",\n                            \"permalink_url\": \"https://www.facebook.com/Unitel.la/posts/3164216563837609\"\n                        },\n                        \"post_id\": \"1560631680862780_3164216563837609\",\n                        \"parent_id\": \"1560631680862780_3164216563837609\",\n                        \"verb\": \"add\",\n                        \"from\": {\n                            \"name\": \"Nguyễn Nam Hưng\",\n                            \"id\": \"2943204472423534\"\n                        },\n                        \"message\": \"22222222222222222222222\",\n                        \"comment_id\": \"3164216563837609_3165744960351436\"\n                    }\n                }\n            ],\n            \"id\": \"1560631680862780\",\n            \"time\": 1645690539\n        }\n    ],\n    \"object\": \"page\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:9801/callback",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "9801",
+							"path": [
+								"callback"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "sendChatToWebhook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"entry\": [\n        {\n            \"id\": \"1926116150757837\",\n            \"time\": 1636706043109,\n            \"messaging\": [\n                {\n                    \"sender\": {\n                        \"id\": \"4617689161622693\"\n                    },\n                    \"recipient\": {\n                        \"id\": \"1926116150757837\"\n                    },\n                    \"message\": {\n                        \"mid\": \"m_XO2LolPfvQ4Q6WTLEbDV3QnSe9pTIt_WMkHmFtsHkJdt6v1gFzVKw6WkX0ImSLkww9lSvuZBFmGXtxQnIYtwhQ\",\n                        \"text\": \"1\"\n                    },\n                    \"timestamp\": 1636706042847\n                }\n            ]\n        }\n    ],\n    \"object\": \"page\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:9800/callback",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9800",
+							"path": [
+								"callback"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "callback",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://myccpublic.unitel.com.la:9801/callback",
+							"protocol": "https",
+							"host": [
+								"myccpublic",
+								"unitel",
+								"com",
+								"la"
+							],
+							"port": "9801",
+							"path": [
+								"callback"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FACEBOOK_SERVICES",
+			"item": [
+				{
+					"name": "savePage",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"access_token\": \"EAAIbbzX9evUBAGaKdZC4X1nhdTsy72gSlXuXM3824xGANYiJ5MlZBZBDulMnNZCahvvkwmj6ohLi1IRLZA9vP4oVjuxyQ6WxE4OK68wV1JKMoRK0VWBjZBXBBp7nC19Q9bdQe8lxAONaGBQPzvZArR4d76hA1QWJUZBwApRUaWb1OI1IsETrcl7M\",\n        \"name\": \"Blue Sky\",\n        \"link\": \"https://www.facebook.com/111318380672773\",\n        \"talking_about_count\": 0,\n        \"page_token\": \"Blue-Sky-111318380672773\",\n        \"id\": \"111318380672773\",\n        \"category\": \"Book\",\n        \"checkins\": 0,\n        \"posts\": {\n            \"data\": [\n                {\n                    \"created_time\": \"2020-07-29T10:28:09+0000\",\n                    \"id\": \"111318380672773_111325824005362\",\n                    \"message\": \"POST 1\"\n                },\n                {\n                    \"created_time\": \"2020-07-29T10:21:32+0000\",\n                    \"id\": \"111318380672773_111318667339411\",\n                    \"story\": \"Blue Sky updated their profile picture.\"\n                }\n            ],\n            \"paging\": {\n                \"cursors\": {\n                    \"before\": \"QVFIUmM4bHdlNWg0NTI4RzZA2SkVuUERhbGRid3hfUjNlVU4tNGdZAWDZABekRab0ZAkcjJJYnFNR1pVNkgtVlpDdnpNZAVJmUjkzQTg2aXFzeVhIWFZAvamZAPTC1xV2tDRERkQnFHMTcxTDdQaFpXY3dkcWFiZAGthVkFJTzZAXRUxIWFRTaU5D\",\n                    \"after\": \"QVFIUlBZAZAFhQOTdjS05JVTRKcnhVZAUlYUHFkNVBQRlB0MXpTQ1gtVGRtczdfcFFOYzFERFFxVzVhSVZAuc3NrOTRzeXJrOTA2TVNtNWp4dW0xWUpFOXBHWlI2OU5sVVR0VkVXakhGSWdPMkpmdzF1RHJiZATNpenZA0cUU2RUV4ZAkZA2dWRK\"\n                }\n            }\n        },\n        \"picture\": {\n            \"data\": {\n                \"url\": \"https://scontent.fbjm1-1.fna.fbcdn.net/v/t1.0-1/cp0/p50x50/115343052_111318634006081_6265847255540168060_n.png?_nc_cat=100&ccb=3&_nc_sid=dbb9e7&_nc_ohc=TlQGiAjAZhsAX_q8lg2&_nc_ht=scontent.fbjm1-1.fna&_nc_tp=30&oh=fd8c269edc93e9e63720254b09c9a62e&oe=605A8782\"\n            }\n        },\n        \"wallClass\": \"checkStyle\",\n        \"wallStyle\": \"fa fa-check fa-fw fa-lg\",\n        \"active\": 1,\n        \"msgClass\": \"checkStyle\",\n        \"msgStyle\": \"fa fa-check fa-fw fa-lg\",\n        \"activeInbox\": 1,\n        \"pageId\": \"111318380672773\",\n        \"token\": \"EAAIbbzX9evUBAGaKdZC4X1nhdTsy72gSlXuXM3824xGANYiJ5MlZBZBDulMnNZCahvvkwmj6ohLi1IRLZA9vP4oVjuxyQ6WxE4OK68wV1JKMoRK0VWBjZBXBBp7nC19Q9bdQe8lxAONaGBQPzvZArR4d76hA1QWJUZBwApRUaWb1OI1IsETrcl7M\",\n        \"fbmToken\": \"EAAIbbzX9evUBAGaKdZC4X1nhdTsy72gSlXuXM3824xGANYiJ5MlZBZBDulMnNZCahvvkwmj6ohLi1IRLZA9vP4oVjuxyQ6WxE4OK68wV1JKMoRK0VWBjZBXBBp7nC19Q9bdQe8lxAONaGBQPzvZArR4d76hA1QWJUZBwApRUaWb1OI1IsETrcl7M\",\n        \"type\": \"1\",\n        \"processId\": \"CS_FACEBOOK_1\",\n        \"status\": \"1\",\n        \"siteId\": \"662919\",\n        \"createBy\": \"mycc_test3\",\n        \"updateBy\": \"mycc_test3\",\n        \"createDate\": \"2021-02-22T06:58:05.590Z\",\n        \"updateDate\": \"2021-02-22T06:58:05.590Z\"\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://{{DOMAIN}}:9079/api/savePage",
+							"protocol": "https",
+							"host": [
+								"{{DOMAIN}}"
+							],
+							"port": "9079",
+							"path": [
+								"api",
+								"savePage"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "viewFbComment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Auth-Token",
+								"value": "{{access_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"statusCode\": null,\n    \"ticketId\": 142669,\n    \"sourceId\": 4766,\n    \"createDate\": 1642908864000,\n    \"refId\": \"579101515924159_1280968269070810\",\n    \"customerId\": 291451,\n    \"ticketStatus\": 1,\n    \"responseStatus\": 0,\n    \"priorityId\": 1,\n    \"resolveSla\": null,\n    \"firstResponeSla\": null,\n    \"agentProcess\": \"\",\n    \"firstResponeDate\": null,\n    \"resolveDate\": 1642908864000,\n    \"assignDate\": null,\n    \"secondResponeDate\": null,\n    \"agentId\": \"\",\n    \"ticketSlaId\": null,\n    \"companySiteId\": 673035,\n    \"siteId\": 673035,\n    \"requestDate\": 1642908864000,\n    \"lastRequestDate\": 1642908864000,\n    \"ticketTypeId\": null,\n    \"ticketTypeId1\": null,\n    \"ticketTypeId2\": null,\n    \"ticketTypeId3\": null,\n    \"ticketTypeIdFull\": null,\n    \"ticketTypeTemp\": null,\n    \"secondResponeSla\": null,\n    \"cooperateId\": null,\n    \"subject\": \"comment6\",\n    \"customerName\": \"Thieu Lpnang\",\n    \"sourceName\": \"DSS Kompany_PostComment\",\n    \"chanelId\": 1,\n    \"overDue\": 0,\n    \"fromDate\": null,\n    \"toDate\": null,\n    \"fromDateStr\": null,\n    \"toDateStr\": null,\n    \"customerCode\": \"1914610995327669-Thieu Lpnang\",\n    \"agentAssignId\": \"\",\n    \"agentAssign\": \"\",\n    \"userLogin\": null,\n    \"readed\": 0,\n    \"emailFrom\": null,\n    \"ticketTypeName\": \"\",\n    \"ticketStatusTemp\": null,\n    \"priorityTemp\": null,\n    \"postTypeId\": null,\n    \"postTypeName\": \"\",\n    \"postCustomer\": 0,\n    \"agentType\": null,\n    \"reason\": \"\",\n    \"process\": \"\",\n    \"agentSiteId\": null,\n    \"requestDateStr\": \"23/01/2022 03:34:24\",\n    \"statusTags\": [],\n    \"responseStatusTags\": [],\n    \"priorityTags\": [],\n    \"ticketSourceTags\": [],\n    \"offset\": 0,\n    \"limit\": 0,\n    \"ticketSourceDTO\": {\n        \"keySet\": null,\n        \"sourceId\": 0,\n        \"sourceCode\": \"520426585124986\",\n        \"sourceName\": null,\n        \"chanelId\": null,\n        \"siteId\": null,\n        \"createDate\": null,\n        \"signarureConfig\": null,\n        \"status\": null,\n        \"errorCode\": null,\n        \"detail\": null\n    },\n    \"agentRole\": null,\n    \"agentAssignTemp\": null,\n    \"agentAssignIdTemp\": null,\n    \"siteAssignIdTemp\": null,\n    \"slaDate\": null,\n    \"slaProcessDate\": null,\n    \"slaCooperateDate\": null,\n    \"postId\": \"520426585124986_579101515924159\",\n    \"lastUpdateTime\": 1642908864000,\n    \"siteName\": \"dss\",\n    \"companySiteName\": \"dss\",\n    \"agentCompanyId\": null,\n    \"historyTicket\": null,\n    \"ignored\": 0,\n    \"reasonCatItemId\": null,\n    \"problemCatItemId\": 0,\n    \"assignOption\": null,\n    \"content\": \"comment6\",\n    \"customerPhone\": null,\n    \"viewType\": null,\n    \"ticketCode\": null,\n    \"orderType\": 0,\n    \"classifyRequireId\": null,\n    \"availableTicket\": null,\n    \"sourceCode\": null,\n    \"isTicketChat\": null,\n    \"customerEmail\": null,\n    \"requestTime\": null,\n    \"viewCust\": false,\n    \"taglist\": null,\n    \"ticketTagList\": null,\n    \"tagIdList\": null,\n    \"chatType\": null,\n    \"evaluation\": 0,\n    \"keyword\": null,\n    \"errorCode\": null,\n    \"customizeFieldObjectDTOList\": null,\n    \"functionCode\": null,\n    \"sourceReference\": null,\n    \"ticketType\": null,\n    \"listContact\": null,\n    \"eventType\": null,\n    \"siteProcessId\": null\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://dss.moj.gov.vn:9079/api/viewFbComment",
+							"protocol": "https",
+							"host": [
+								"dss",
+								"moj",
+								"gov",
+								"vn"
+							],
+							"port": "9079",
+							"path": [
+								"api",
+								"viewFbComment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "FACEBOOK_API",
+			"item": [
+				{
+					"name": "getSubscribersPage",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v2.8/{{fb_page_id}}/subscribed_apps?access_token={{fb_page_token}}&format=json&fields=id,name,namespace,app_name,app_type,company,category,description,contact_email,link,icon_url,logo_url,hosting_url,created_time, subscribed_fields",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v2.8",
+								"{{fb_page_id}}",
+								"subscribed_apps"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "fields",
+									"value": "id,name,namespace,app_name,app_type,company,category,description,contact_email,link,icon_url,logo_url,hosting_url,created_time, subscribed_fields"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getLongLiveUserAccessToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);",
+									"postman.setEnvironmentVariable(\"fb_user_long_live_token\", jsonData.access_token);",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/oauth/access_token?grant_type=fb_exchange_token&client_id={{fb_app_client_id}}&client_secret={{fb_app_client_secret}}&fb_exchange_token={{fb_user_short_live_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"oauth",
+								"access_token"
+							],
+							"query": [
+								{
+									"key": "grant_type",
+									"value": "fb_exchange_token"
+								},
+								{
+									"key": "client_id",
+									"value": "{{fb_app_client_id}}"
+								},
+								{
+									"key": "client_secret",
+									"value": "{{fb_app_client_secret}}"
+								},
+								{
+									"key": "fb_exchange_token",
+									"value": "{{fb_user_short_live_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getDebugToken",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v2.8/debug_token?input_token=EAAGGAolEinABAAThqwE13kynZCdPiyDmsugYXPNdgLGJ84BFeA6dhRMqFzNiThAzLCGnaE1mtCDFJnGKOdBeQFFO63zKL6H0OF7WhlKaYDXxfmZC1iW8UUQt5ZCXZAClmrVvzMel3WVVhxYPcrH7eOiNh9E5BVZCKRZARaxbkIsUNegsscVv4h&access_token={{fb_page_long_live_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v2.8",
+								"debug_token"
+							],
+							"query": [
+								{
+									"key": "input_token",
+									"value": "EAAGGAolEinABAAThqwE13kynZCdPiyDmsugYXPNdgLGJ84BFeA6dhRMqFzNiThAzLCGnaE1mtCDFJnGKOdBeQFFO63zKL6H0OF7WhlKaYDXxfmZC1iW8UUQt5ZCXZAClmrVvzMel3WVVhxYPcrH7eOiNh9E5BVZCKRZARaxbkIsUNegsscVv4h"
+								},
+								{
+									"key": "access_token",
+									"value": "{{fb_page_long_live_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "subscribersPage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subscribed_fields",
+									"value": "feed, mention, name, picture, category, description, conversations, messages,videos, messaging_postbacks,messaging_feedback",
+									"type": "text"
+								},
+								{
+									"key": "access_token",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "format",
+									"value": "json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v2.8/{{fb_page_id}}/subscribed_apps?access_token={{fb_page_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v2.8",
+								"{{fb_page_id}}",
+								"subscribed_apps"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPostByPostId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subscribed_fields",
+									"value": "feed, mention, name, picture, category, description, conversations, messages",
+									"type": "text"
+								},
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}",
+									"type": "text"
+								},
+								{
+									"key": "format",
+									"value": "json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v2.8/{{fb_post_id}}?access_token={{fb_page_token}}&fields=id,likes.limit(0).summary(true),comments.limit(0).summary(true).filter(stream),from.fields(id,name,picture.type(large),link),parent_id,message,created_time,updated_time,actions,picture,attachments&format=json",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v2.8",
+								"{{fb_post_id}}"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "fields",
+									"value": "id,likes.limit(0).summary(true),comments.limit(0).summary(true).filter(stream),from.fields(id,name,picture.type(large),link),parent_id,message,created_time,updated_time,actions,picture,attachments"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommentByPostId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "subscribed_fields",
+									"value": "feed, mention, name, picture, category, description, conversations, messages",
+									"type": "text"
+								},
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}",
+									"type": "text"
+								},
+								{
+									"key": "format",
+									"value": "json",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v2.8/{{fb_post_id}}?access_token={{fb_page_token}}&fields=id,likes.limit(0).summary(true),comments.limit(0).summary(true).filter(stream),from.fields(id,name,picture.type(large),link),parent_id,message,created_time,updated_time,actions,picture,attachments&format=json",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v2.8",
+								"{{fb_post_id}}"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "fields",
+									"value": "id,likes.limit(0).summary(true),comments.limit(0).summary(true).filter(stream),from.fields(id,name,picture.type(large),link),parent_id,message,created_time,updated_time,actions,picture,attachments"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReplyComment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"message\":\"reply\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/{{fb_post_id}}/comments?access_token={{fb_page_token}}&format=json&=reply&",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"{{fb_post_id}}",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "",
+									"value": "reply"
+								},
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ReplyComment Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"message\": \"facebook.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/{{fb_post_id}}/comments?access_token={{fb_page_token}}&format=json",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"{{fb_post_id}}",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "message",
+									"value": "reply",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "send_messages_attachments",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"message\":{\n      \"attachment\":{\n         \"type\":\"image\",\n         \"payload\":{\n            \"url\":\"https://myccpublic.telemor.tl:9081/f/386f1005ddff3c15101303017cd41b19/8455add94b4be5a74330999971338cad59ce0e166b0ab48b101ecae3a76137c2/file.png\",\n            \"is_reusable\":false\n         }\n      }\n   },\n   \"recipient\":{\n      \"id\":\"4277187012358901\"\n   }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v11.0/me/message_attachments?access_token={{fb_page_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v11.0",
+								"me",
+								"message_attachments"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllConversations",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/{{fb_page_id}}/conversations?access_token={{fb_page_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"{{fb_page_id}}",
+								"conversations"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPages",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "https://graph.facebook.com/v5.0/me/accounts?access_token={{fb_user_long_live_token}}&fields=name, about, category, checkins, id, access_token, app_id",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v5.0",
+								"me",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_user_long_live_token}}"
+								},
+								{
+									"key": "fields",
+									"value": "name, about, category, checkins, id, access_token, app_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClientCode",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"fb_client_code\", jsonData.code);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/oauth/client_code?access_token={{fb_user_long_live_token}}&client_id=459155714634952&client_secret=2de78b7f0e51825c465bd8a069466ebd&redirect_uri=https://myccpublic.telemor.tl/",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"oauth",
+								"client_code"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_user_long_live_token}}"
+								},
+								{
+									"key": "client_id",
+									"value": "459155714634952"
+								},
+								{
+									"key": "client_secret",
+									"value": "2de78b7f0e51825c465bd8a069466ebd"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://myccpublic.telemor.tl/"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getUserLongLivedAccessToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/oauth/access_token?access_token={{fb_user_long_live_token}}&client_id=459155714634952&redirect_uri=https://myccpublic.telemor.tl/&code={{fb_client_code}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"oauth",
+								"access_token"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_user_long_live_token}}"
+								},
+								{
+									"key": "client_id",
+									"value": "459155714634952"
+								},
+								{
+									"key": "client_secret",
+									"value": "2de78b7f0e51825c465bd8a069466ebd",
+									"disabled": true
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://myccpublic.telemor.tl/"
+								},
+								{
+									"key": "code",
+									"value": "{{fb_client_code}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPageLongLivedAccessToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/3604144089646070/accounts?access_token={{fb_user_long_live_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"3604144089646070",
+								"accounts"
+							],
+							"query": [
+								{
+									"key": "client_id",
+									"value": "459155714634952",
+									"disabled": true
+								},
+								{
+									"key": "client_secret",
+									"value": "2de78b7f0e51825c465bd8a069466ebd",
+									"disabled": true
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://myccpublic.telemor.tl/",
+									"disabled": true
+								},
+								{
+									"key": "code",
+									"value": "{{fb_client_code}}",
+									"disabled": true
+								},
+								{
+									"key": "access_token",
+									"value": "{{fb_user_long_live_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getFirstUserLongLivedAccessToken",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = JSON.parse(responseBody);\r",
+									"postman.setEnvironmentVariable(\"fb_user_long_live_token\", jsonData.access_token);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/oauth/access_token?client_secret=2de78b7f0e51825c465bd8a069466ebd&grant_type=fb_exchange_token&client_id=459155714634952&fb_exchange_token={{fb_user_short_live_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"oauth",
+								"access_token"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "client_secret",
+									"value": "2de78b7f0e51825c465bd8a069466ebd"
+								},
+								{
+									"key": "grant_type",
+									"value": "fb_exchange_token"
+								},
+								{
+									"key": "client_id",
+									"value": "459155714634952"
+								},
+								{
+									"key": "fb_exchange_token",
+									"value": "{{fb_user_short_live_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllMessageByConversationId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/t_2198565070402716?fields=messages{message}&access_token={{fb_page_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"t_2198565070402716"
+							],
+							"query": [
+								{
+									"key": "fields",
+									"value": "messages{message}"
+								},
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPages",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/me/accounts/conversations?access_token={{fb_user_token}}&fields=name, about, category, checkins, likes{fan_count, were_here_count},\n            link, talking_about_count, id, posts, access_token, app_id, page_token, picture{url}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"me",
+								"accounts",
+								"conversations"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_user_token}}"
+								},
+								{
+									"key": "fields",
+									"value": "name, about, category, checkins, likes{fan_count, were_here_count},\n            link, talking_about_count, id, posts, access_token, app_id, page_token, picture{url}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getClientCode Copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/oauth/client_code?access_token={{fb_page_token}}&client_id=459155714634952&client_secret=2de78b7f0e51825c465bd8a069466ebd&redirect_uri=https://myccpublic.telemor.tl/",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"oauth",
+								"client_code"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "client_id",
+									"value": "459155714634952"
+								},
+								{
+									"key": "client_secret",
+									"value": "2de78b7f0e51825c465bd8a069466ebd"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://myccpublic.telemor.tl/"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getComments",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/{{fb_post_id}}/comments?access_token={{fb_page_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"{{fb_post_id}}",
+								"comments"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMessages",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fields",
+									"value": "",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v13.0/t_3041781562548995/messages?access_token={{fb_page_token}}&format=json&fields=id,message,created_time,tags,to,attachments,shares,from",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v13.0",
+								"t_3041781562548995",
+								"messages"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "fields",
+									"value": "id,message,created_time,tags,to,attachments,shares,from"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getMessagesById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "{{fb_page_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fields",
+									"value": "id,message,subject,created_time,tags,to,attachments,shares,from",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v15.0/m_rONuikGES6F0Fh0pMJ9GQmGLCrL9_i2xDvHPTSbHdgqDZ0ppFwa7-Dbm3H3jlX2x6wE1GdNW8FY12-YJ1IK6VQ/?access_token={{fb_page_token}}&format=json&fields=id,message,created_time,tags,to,attachments,from",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v15.0",
+								"m_rONuikGES6F0Fh0pMJ9GQmGLCrL9_i2xDvHPTSbHdgqDZ0ppFwa7-Dbm3H3jlX2x6wE1GdNW8FY12-YJ1IK6VQ",
+								""
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "fields",
+									"value": "id,message,created_time,tags,to,attachments,from"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getAttachmentMessagesById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "access_token",
+								"value": "{{fb_page_token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fields",
+									"value": "id,message,subject,created_time,tags,to,attachments,shares,from",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "https://graph.facebook.com/v15.0/m_rONuikGES6F0Fh0pMJ9GQmGLCrL9_i2xDvHPTSbHdgqDZ0ppFwa7-Dbm3H3jlX2x6wE1GdNW8FY12-YJ1IK6VQ/?access_token={{fb_page_token}}&format=json&fields=id,message,created_time,tags,to,attachments,from",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v15.0",
+								"m_rONuikGES6F0Fh0pMJ9GQmGLCrL9_i2xDvHPTSbHdgqDZ0ppFwa7-Dbm3H3jlX2x6wE1GdNW8FY12-YJ1IK6VQ",
+								""
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_page_token}}"
+								},
+								{
+									"key": "format",
+									"value": "json"
+								},
+								{
+									"key": "fields",
+									"value": "id,message,created_time,tags,to,attachments,from"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCommentDetail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://graph.facebook.com/v3.2/me?access_token={{fb_user_long_live_token}}",
+							"protocol": "https",
+							"host": [
+								"graph",
+								"facebook",
+								"com"
+							],
+							"path": [
+								"v3.2",
+								"me"
+							],
+							"query": [
+								{
+									"key": "access_token",
+									"value": "{{fb_user_long_live_token}}"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CHAT_REPORT",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "exportExcelChat",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA4OWE5Y2Y4ZWM2NjlhZWM3YzU0OWQ0NmUyZWVlNjlkIn0.eyJpc3MiOiJrYXpvbyIsImlkZW50aXR5X3NpZyI6IlIwMUVZM0QyVUFFcjFKcURlNXFfbEt3QzZpd3BPMnBTODUxazYzazMxLTAiLCJhY2NvdW50X2lkIjoiNmYzODQ0OTMwZDc2MGZmMzM4MzI5OGU0ZDhlNzk0MjQiLCJvd25lcl9pZCI6IjRiNWQ2Yjk3ZjRmZTJiNTY1Mzg5NDliNjFhNDIyOGEwIiwibWV0aG9kIjoiY2JfdXNlcl9hdXRoIiwiZXhwIjoxNjcxODM0NzA1fQ.roViENRCmc6w6ahaDz08OPSNzQMBv6a4ODiUnKSgETSVuIrBOAEo-rTun4_IFiu7TJanatFCvfr4H3jP10-vRtTW3yFdQzJaISsMzM2f9wpzPx63GZzIEJZ37xvNOvRFtK9wTn-PuDwAazNSVljpK2hqL06nAbYO20Ur5puYpB-KKikr4yKELyYHBQUFoVYIghfI-ErgNMHW5i75XNPNoA0dlzaIoJ4LBZRaHKtN0ktwMWHtZY-izY3RVWHxiHRQo4a2AsHSW2zbUK14ljUAjaaSfHTaiYH1dwY4KRRp9b1uh2VdLoHaYkvG_fXJBvvOFoTU_XE6rNVRdxV1h-6lIQ"
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "https://mytel2.moj.gov.vn"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-site"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Referer",
+								"value": "https://mytel2.moj.gov.vn/"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,vi;q=0.8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limit\": 10,\n    \"limitRow\": 5000,\n    \"maxRow\": 200,\n    \"offset\": 0,\n    \"language\": \"vi\",\n    \"senderVisitorName\": \"\",\n    \"senderAgentName\": \"\",\n    \"conversationId\": \"\",\n    \"timeZoneClient\": 420,\n    \"phoneNumber\": \"\",\n    \"reportId\": \"1\",\n    \"siteId\": \"653035\",\n    \"fromDateValue\": \"2022-12-15T17:00:00.000Z\",\n    \"toDateValue\": \"2022-12-23T16:59:59.000Z\",\n    \"reportName\": \"Báo cáo chi tiết theo phiên\",\n    \"agentProcess\": \"hungnn30\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:6676/services_chat_report/api/exportExcelChat/420",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6676",
+							"path": [
+								"services_chat_report",
+								"api",
+								"exportExcelChat",
+								"420"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exportExcelChatNew",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Connection",
+								"value": "keep-alive"
+							},
+							{
+								"key": "sec-ch-ua",
+								"value": "\" Not;A Brand\";v=\"99\", \"Google Chrome\";v=\"91\", \"Chromium\";v=\"91\""
+							},
+							{
+								"key": "Accept",
+								"value": "application/json, text/plain, */*"
+							},
+							{
+								"key": "X-Auth-Token",
+								"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IjA4OWE5Y2Y4ZWM2NjlhZWM3YzU0OWQ0NmUyZWVlNjlkIn0.eyJpc3MiOiJrYXpvbyIsImlkZW50aXR5X3NpZyI6IlIwMUVZM0QyVUFFcjFKcURlNXFfbEt3QzZpd3BPMnBTODUxazYzazMxLTAiLCJhY2NvdW50X2lkIjoiNmYzODQ0OTMwZDc2MGZmMzM4MzI5OGU0ZDhlNzk0MjQiLCJvd25lcl9pZCI6IjRiNWQ2Yjk3ZjRmZTJiNTY1Mzg5NDliNjFhNDIyOGEwIiwibWV0aG9kIjoiY2JfdXNlcl9hdXRoIiwiZXhwIjoxNjcxODM0NzA1fQ.roViENRCmc6w6ahaDz08OPSNzQMBv6a4ODiUnKSgETSVuIrBOAEo-rTun4_IFiu7TJanatFCvfr4H3jP10-vRtTW3yFdQzJaISsMzM2f9wpzPx63GZzIEJZ37xvNOvRFtK9wTn-PuDwAazNSVljpK2hqL06nAbYO20Ur5puYpB-KKikr4yKELyYHBQUFoVYIghfI-ErgNMHW5i75XNPNoA0dlzaIoJ4LBZRaHKtN0ktwMWHtZY-izY3RVWHxiHRQo4a2AsHSW2zbUK14ljUAjaaSfHTaiYH1dwY4KRRp9b1uh2VdLoHaYkvG_fXJBvvOFoTU_XE6rNVRdxV1h-6lIQ"
+							},
+							{
+								"key": "sec-ch-ua-mobile",
+								"value": "?0"
+							},
+							{
+								"key": "User-Agent",
+								"value": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "https://mytel2.moj.gov.vn"
+							},
+							{
+								"key": "Sec-Fetch-Site",
+								"value": "same-site"
+							},
+							{
+								"key": "Sec-Fetch-Mode",
+								"value": "cors"
+							},
+							{
+								"key": "Sec-Fetch-Dest",
+								"value": "empty"
+							},
+							{
+								"key": "Referer",
+								"value": "https://mytel2.moj.gov.vn/"
+							},
+							{
+								"key": "Accept-Language",
+								"value": "en-US,en;q=0.9,vi;q=0.8"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"limit\": 10,\n    \"limitRow\": 5000,\n    \"maxRow\": 200,\n    \"offset\": 0,\n    \"language\": \"vi\",\n    \"senderVisitorName\": \"\",\n    \"senderAgentName\": \"\",\n    \"conversationId\": \"\",\n    \"timeZoneClient\": 420,\n    \"phoneNumber\": \"\",\n    \"reportId\": \"1\",\n    \"siteId\": \"653035\",\n    \"fromDateValue\": \"2022-12-15T17:00:00.000Z\",\n    \"toDateValue\": \"2022-12-23T16:59:59.000Z\",\n    \"reportName\": \"Báo cáo chi tiết theo phiên\",\n    \"agentProcess\": \"hungnn30\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:6676/services_chat_report/api/exportExcelChatNew/420",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6676",
+							"path": [
+								"services_chat_report",
+								"api",
+								"exportExcelChatNew",
+								"420"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "SERVICES_PIVOT",
+			"item": []
+		},
+		{
+			"name": "getAuthenToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.auth_token);",
+							"postman.setEnvironmentVariable(\"account_id\", jsonData.data.account_id);",
+							"postman.setEnvironmentVariable(\"kz_user_id\", jsonData.data.owner_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\": {\"account_name\":\"{{account_name}}\", \"credentials\": \"{{credentials}}\"} }"
+				},
+				"url": {
+					"raw": "https://{{DOMAIN}}:8001/v2/user_auth",
+					"protocol": "https",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "8001",
+					"path": [
+						"v2",
+						"user_auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAuthenTokenSuperAdmin",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.auth_token);",
+							"//postman.setEnvironmentVariable(\"account_id\", jsonData.data.account_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\": {\"account_name\":\"master\", \"credentials\": \"46d392da481659e24a648be77f8abdc8\"} }"
+				},
+				"url": {
+					"raw": "https://{{DOMAIN}}:8001/v2/user_auth",
+					"protocol": "https",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "8001",
+					"path": [
+						"v2",
+						"user_auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAuthenToken ServerTest",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.auth_token);",
+							"postman.setEnvironmentVariable(\"account_id\", jsonData.data.account_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\": {\"account_name\":\"{{account_name}}\", \"credentials\": \"{{credentials}}\"} }"
+				},
+				"url": {
+					"raw": "https://{{DOMAIN_TEST}}:8001/v2/user_auth",
+					"protocol": "https",
+					"host": [
+						"{{DOMAIN_TEST}}"
+					],
+					"port": "8001",
+					"path": [
+						"v2",
+						"user_auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAPIKey",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.auth_token);",
+							"postman.setEnvironmentVariable(\"account_id\", jsonData.data.account_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://{{DOMAIN}}:8001/v2/accounts/{{account_id}}/api_key",
+					"protocol": "https",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "8001",
+					"path": [
+						"v2",
+						"accounts",
+						"{{account_id}}",
+						"api_key"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Campaign_CD7\",\r\n        \"connection_timeout\": 100,\r\n        \"max_priority\": 1,\r\n        \"agents\": [\r\n            \"f975db2b8ea0fb013d29c9d0a975a3ab\"\r\n        ],\r\n        \"caller_exit_key\": \"#\",\r\n        \"enter_when_empty\": true,\r\n        \"ring_simultaneously\": 1,\r\n        \"strategy\": \"round_robin\",\r\n        \"max_queue_size\": 100,\r\n        \"agent_ring_timeout\": 100,\r\n        \"agent_wrapup_time\": 100,\r\n        \"record_caller\": false,\r\n        \"id\": \"26bcf59de2fb5714a264d3cffb4a4151\"\r\n    }\r\n}\r\n\r\n{\r\n    \"data\": [\r\n        \"f975db2b8ea0fb013d29c9d0a975a3ab\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/v2/createDevice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v2",
+						"createDevice"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "refreshAuthenToken",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"access_token\", jsonData.auth_token);",
+							"postman.setEnvironmentVariable(\"account_id\", jsonData.data.account_id);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"action\": \"refresh_token\", \"data\": {} }"
+				},
+				"url": {
+					"raw": "https://{{DOMAIN}}:8001/v2/auth",
+					"protocol": "https",
+					"host": [
+						"{{DOMAIN}}"
+					],
+					"port": "8001",
+					"path": [
+						"v2",
+						"auth"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAudioRecording",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "fromTime",
+							"value": "1640019600",
+							"type": "text"
+						},
+						{
+							"key": "toTime",
+							"value": "1640883600",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:6200/v2/accounts/{{account_id}}/recordings/{{media_id}}?accept=audio/mpeg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6200",
+					"path": [
+						"v2",
+						"accounts",
+						"{{account_id}}",
+						"recordings",
+						"{{media_id}}"
+					],
+					"query": [
+						{
+							"key": "accept",
+							"value": "audio/mpeg"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "test Copy",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-Auth-Token",
+						"value": "{{access_token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"data\": {\r\n        \"name\": \"Campaign_CD7\",\r\n        \"connection_timeout\": 100,\r\n        \"max_priority\": 1,\r\n        \"agents\": [\r\n            \"f975db2b8ea0fb013d29c9d0a975a3ab\"\r\n        ],\r\n        \"caller_exit_key\": \"#\",\r\n        \"enter_when_empty\": true,\r\n        \"ring_simultaneously\": 1,\r\n        \"strategy\": \"round_robin\",\r\n        \"max_queue_size\": 100,\r\n        \"agent_ring_timeout\": 100,\r\n        \"agent_wrapup_time\": 100,\r\n        \"record_caller\": false,\r\n        \"id\": \"26bcf59de2fb5714a264d3cffb4a4151\"\r\n    }\r\n}\r\n\r\n{\r\n    \"data\": [\r\n        \"f975db2b8ea0fb013d29c9d0a975a3ab\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/api/v2/createDevice",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"api",
+						"v2",
+						"createDevice"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
